@@ -9,7 +9,7 @@ from pymongo import MongoClient
 from pprint import pprint
 
 # Local application imports
-from config_loader import load_config
+from .config_loader import load_config
 
 def mongoGetCredentials():
     """
@@ -244,16 +244,3 @@ def get_file_record_count(file_path, headerline=True):
         logging.error("Unsupported file type.")
     
     return max(0, record_count)  # Ensure we don't return a negative count
-
-
-
-# Example usage
-result_message, imported_count = mongoImportFile("my_database", "my_collection", "csv", "data.csv", headerline=True, drop=True)
-print(result_message, f"Imported record count: {imported_count}")
-
-databases = mongoListDatabases()
-for database in databases:
-    print(f"{database}")
-    collections = mongoListCollections(database)
-    for collection in collections:
-        print(f"\t{collection}")
