@@ -186,20 +186,21 @@ def mongoImportFile(db_name, collection_name, file_type, file_path, headerline=T
     # Include drop option if specified
     if drop:
         command.append('--drop')
-
-    # Get the initial document count
-    initial_count = client[db_name][collection_name].count_documents({}) if collection_name in client[db_name].list_collection_names() else 0
+        initial_count = 0
+    else:
+        # Get the initial document count
+        initial_count = client[db_name][collection_name].count_documents({}) if collection_name in client[db_name].list_collection_names() else 0
 
     # Execute the command
     try:
         subprocess.run(command, check=True)
         logging.info(f"Imported {file_path} into collection {collection_name}.")
 
-        # After a successful import, retrieve the new document count in the collection
-        new_count = client[db_name][collection_name].count_documents({})
-
         # Check the number of records imported from the file
         imported_count = get_file_record_count(file_path, headerline)
+
+        # After a successful import, retrieve the new document count in the collection
+        new_count = client[db_name][collection_name].count_documents({})
 
         # Calculate the number of new records added
         new_records_added = new_count - initial_count
