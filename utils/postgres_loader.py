@@ -1,4 +1,5 @@
 # Standard library imports
+import csv
 import logging
 from pathlib import Path
 from urllib.parse import quote_plus
@@ -179,21 +180,29 @@ def postgresImportFile(db_name, table_name, file_location, delimiter=',', header
     Returns:
         int: The number of records successfully imported into the table.
     """
-    # Get PostgresSQL credentials and establish a connection
+    # Get PostgreSQL credentials and establish a connection
     postgres_uri = postgresGetCredentials(engine_type="psycopg2")
 
     # Use a context manager to handle the connection and cursor
     try:
         with psycopg2.connect(f"{postgres_uri} dbname='{db_name}'") as conn:
             with conn.cursor() as cursor:
-                # Prepare the COPY SQL statement
-                if headerline:
-                    sql_copy = f"COPY {table_name} FROM STDIN WITH CSV HEADER DELIMITER '{delimiter}';"
-                else:
-                    sql_copy = f"COPY {table_name} FROM STDIN WITH CSV DELIMITER '{delimiter}';"
-
-                # Open the file and load its contents
+                # Open the file and read the header and contents
                 with open(file_location, 'r') as file:
+                    reader = csv.reader(file, delimiter=delimiter)
+                    
+                    # Read headers if they exist
+                    if headerline:
+                        headers = next(reader)
+                        headers_str = ', '.join(headers)  # Convert header list to string
+                        sql_copy = f"COPY {table_name} ({headers_str}) FROM STDIN WITH CSV HEADER DELIMITER '{delimiter}';"
+                    else:
+                        sql_copy = f"COPY {table_name} FROM STDIN WITH CSV DELIMITER '{delimiter}';"
+                    
+                    # Move the file pointer back to the beginning to reuse in COPY
+                    file.seek(0)
+
+                    # Execute the COPY command with file data
                     cursor.copy_expert(sql_copy, file)
 
                 # Count the number of records in the table after import
@@ -206,3 +215,4 @@ def postgresImportFile(db_name, table_name, file_location, delimiter=',', header
     except psycopg2.Error as e:
         logging.error(f"Error importing file {file_location} into table {table_name}: {e}")
         return 0
+

@@ -57,7 +57,6 @@ CREATE TABLE IF NOT EXISTS public.radar_station
 (
     radar_id serial NOT NULL,
     radar_name character varying(100) COLLATE pg_catalog."default" NOT NULL,
-    station_number character varying(50) COLLATE pg_catalog."default" NOT NULL,
     city character varying(100) COLLATE pg_catalog."default" NOT NULL,
     state character varying(50) COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT radar_station_pkey PRIMARY KEY (radar_id),
