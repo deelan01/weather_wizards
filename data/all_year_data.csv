@@ -1,0 +1,902 @@
+Year,Storm, Dates , Max Winds (mph) , Min pressure (mb) , Maximum Strength 
+2018,ALBERTO,5/25 - 5/31,55,990,Tropical Storm
+2018,BERYL,7/4 - 7/17,70,991,Hurricane
+2018,CHRIS,7/5 - 7/17,90,969,Hurricane
+2018,DEBBY,8/2 - 8/10,45,998,Tropical Storm
+2018,ERNESTO,8/15 - 8/19,40,999,Tropical Storm
+2018,FLORENCE,8/30 - 9/18,130,937,Hurricane
+2018,GORDON,9/2 - 9/7,60,996,Tropical Storm
+2018,HELENE,9/7 - 9/17,95,967,Hurricane
+2018,ISAAC,9/7 - 9/15,65,995,Hurricane
+2018,JOYCE,9/12 - 9/21,45,995,Tropical Storm
+2018,KIRK,9/22 - 9/28,55,998,Tropical Storm
+2018,LESLIE,9/22 - 10/14,80,968,Hurricane
+2018,MICHAEL,10/6 - 10/15,140,919,Hurricane
+2018,NADINE,10/8 - 10/12,55,995,Tropical Storm
+2018,NOT_NAMED,9/21 - 9/22,30,1007,Tropical Depression
+2018,OSCAR,10/26 - 11/4,95,952,Hurricane
+2017,ARLENE,4/16 - 4/22,55,986,Tropical Storm
+2017,BRET,6/18 - 6/20,45,1007,Tropical Storm
+2017,CINDY,6/19 - 6/24,50,991,Tropical Storm
+2017,DON,7/17 - 7/18,45,1005,Tropical Storm
+2017,EMILY,7/30 - 8/2,50,1001,Tropical Storm
+2017,FRANKLIN,8/6 - 8/10,75,981,Hurricane
+2017,GERT,8/12 - 8/18,95,962,Hurricane
+2017,HARVEY,8/16 - 9/2,115,937,Hurricane
+2017,IRMA,8/30 - 9/13,155,914,Hurricane
+2017,JOSE,9/4 - 9/25,135,938,Hurricane
+2017,KATIA,9/5 - 9/9,90,972,Hurricane
+2017,LEE,9/14 - 9/30,100,962,Hurricane
+2017,MARIA,9/16 - 10/2,150,908,Hurricane
+2017,NATE,10/3 - 10/11,80,981,Hurricane
+2017,NOT_NAMED,8/27 - 8/29,40,1004,Extratropical
+2017,NOT_NAMED,7/5 - 7/7,25,1009,Tropical Depression
+2017,OPHELIA,10/6 - 10/17,100,957,Hurricane
+2017,PHILIPPE,10/27 - 10/29,35,1000,Tropical Storm
+2017,RINA,11/4 - 11/9,50,991,Tropical Storm
+2016,ALEX,1/7 - 1/17,75,978,Hurricane
+2016,BONNIE,5/27 - 6/9,40,1006,Tropical Storm
+2016,COLIN,6/5 - 6/8,50,987,Tropical Storm
+2016,DANIELLE,6/18 - 6/21,40,1007,Tropical Storm
+2016,EARL,8/2 - 8/6,75,979,Hurricane
+2016,FIONA,8/16 - 8/24,45,1004,Tropical Storm
+2016,GASTON,8/21 - 9/3,105,955,Hurricane
+2016,HERMINE,8/28 - 9/8,70,981,Hurricane
+2016,IAN,9/12 - 9/17,55,984,Tropical Storm
+2016,JULIA,9/13 - 9/21,45,1007,Tropical Storm
+2016,KARL,9/12 - 9/26,60,980,Tropical Storm
+2016,LISA,9/19 - 9/26,45,999,Tropical Storm
+2016,MATTHEW,9/28 - 10/10,145,934,Hurricane
+2016,NICOLE,10/4 - 10/19,120,950,Hurricane
+2016,NOT_NAMED,8/27 - 9/1,30,1010,Tropical Depression
+2016,OTTO,11/17 - 11/26,100,975,Hurricane
+2015,ANA,5/6 - 5/12,50,998,Tropical Storm
+2015,BILL,6/16 - 6/21,50,997,Tropical Storm
+2015,CLAUDETTE,7/12 - 7/15,45,1003,Tropical Storm
+2015,DANNY,8/17 - 8/24,110,960,Hurricane
+2015,ERIKA,8/24 - 8/28,45,1001,Tropical Storm
+2015,FRED,8/30 - 9/6,75,986,Hurricane
+2015,GRACE,9/5 - 9/9,50,1000,Tropical Storm
+2015,HENRI,9/8 - 9/11,45,1003,Tropical Storm
+2015,IDA,9/15 - 9/28,45,1001,Tropical Storm
+2015,JOAQUIN,9/26 - 10/15,135,931,Hurricane
+2015,KATE,11/8 - 11/13,75,980,Hurricane
+2015,NOT_NAMED,9/15 - 9/19,30,1006,Tropical Depression
+2014,ARTHUR,6/28 - 7/9,85,972,Hurricane
+2014,BERTHA,7/29 - 8/9,70,996,Hurricane
+2014,CRISTOBAL,8/23 - 9/2,75,963,Hurricane
+2014,DOLLY,9/1 - 9/4,45,1000,Tropical Storm
+2014,EDOUARD,9/10 - 9/22,105,955,Hurricane
+2014,FAY,10/10 - 10/13,70,983,Hurricane
+2014,GONZALO,10/11 - 10/20,125,940,Hurricane
+2014,HANNA,10/21 - 10/29,35,1000,Tropical Storm
+2014,NOT_NAMED,7/19 - 7/23,30,1012,Tropical Depression
+2013,ANDREA,6/5 - 6/8,55,992,Tropical Storm
+2013,BARBARA,5/28 - 5/30,70,983,Hurricane
+2013,BARRY,6/16 - 6/21,40,1003,Tropical Storm
+2013,CHANTAL,7/7 - 7/10,55,1003,Tropical Storm
+2013,DORIAN,7/22 - 8/4,50,1002,Tropical Storm
+2013,ERIN,8/15 - 8/19,40,1006,Tropical Storm
+2013,FERNAND,8/25 - 8/26,50,1001,Tropical Storm
+2013,GABRIELLE,9/4 - 9/13,55,1003,Tropical Storm
+2013,HUMBERTO,9/8 - 9/19,80,979,Hurricane
+2013,INGRID,9/12 - 9/17,75,983,Hurricane
+2013,JERRY,9/28 - 10/6,45,1005,Tropical Storm
+2013,KAREN,10/3 - 10/6,55,998,Tropical Storm
+2013,LORENZO,10/21 - 10/26,45,1000,Tropical Storm
+2013,MELISSA,11/17 - 11/23,55,980,Tropical Storm
+2013,NOT_NAMED,12/3 - 12/7,55,995,Extratropical
+2013,NOT_NAMED,9/6 - 9/7,30,1008,Tropical Depression
+2012,ALBERTO,5/19 - 5/23,50,995,Tropical Storm
+2012,BERYL,5/25 - 6/2,60,992,Tropical Storm
+2012,CHRIS,6/17 - 6/24,75,974,Hurricane
+2012,DEBBY,6/23 - 6/27,55,990,Tropical Storm
+2012,ERNESTO,8/1 - 8/10,85,973,Hurricane
+2012,FLORENCE,8/3 - 8/8,50,1002,Tropical Storm
+2012,GORDON,8/15 - 8/21,95,965,Hurricane
+2012,HELENE,8/9 - 8/19,40,1004,Tropical Storm
+2012,ISAAC,8/20 - 9/1,70,965,Hurricane
+2012,JOYCE,8/21 - 8/24,35,1006,Tropical Storm
+2012,KIRK,8/28 - 9/3,90,970,Hurricane
+2012,LESLIE,8/28 - 9/12,70,968,Hurricane
+2012,MICHAEL,9/2 - 9/12,100,964,Hurricane
+2012,NADINE,9/10 - 10/4,80,978,Hurricane
+2012,OSCAR,10/2 - 10/5,45,994,Tropical Storm
+2012,PATTY,10/10 - 10/13,40,1005,Tropical Storm
+2012,RAFAEL,10/12 - 10/26,80,966,Hurricane
+2012,SANDY,10/21 - 10/31,100,940,Hurricane
+2012,TONY,10/21 - 10/26,45,1000,Tropical Storm
+2011,ARLENE,6/28 - 7/1,55,993,Tropical Storm
+2011,BRET,7/16 - 7/23,60,995,Tropical Storm
+2011,CINDY,7/20 - 7/23,60,994,Tropical Storm
+2011,DON,7/27 - 7/30,45,997,Tropical Storm
+2011,EMILY,8/2 - 8/7,45,1003,Tropical Storm
+2011,FRANKLIN,8/12 - 8/16,40,1004,Tropical Storm
+2011,GERT,8/13 - 8/17,55,1000,Tropical Storm
+2011,HARVEY,8/19 - 8/22,55,994,Tropical Storm
+2011,IRENE,8/21 - 8/30,105,942,Hurricane
+2011,JOSE,8/26 - 8/29,40,1006,Tropical Storm
+2011,KATIA,8/28 - 9/12,120,942,Hurricane
+2011,LEE,9/2 - 9/6,50,986,Tropical Storm
+2011,MARIA,9/6 - 9/16,70,983,Hurricane
+2011,NATE,9/6 - 9/12,65,994,Hurricane
+2011,NOT_NAMED,8/31 - 9/3,40,1002,Tropical Storm
+2011,NOT_NAMED,8/25 - 8/27,30,1006,Tropical Depression
+2011,OPHELIA,9/20 - 10/4,120,940,Hurricane
+2011,PHILIPPE,9/23 - 10/9,80,976,Hurricane
+2011,RINA,10/22 - 10/29,100,966,Hurricane
+2011,SEAN,11/6 - 11/12,55,982,Tropical Storm
+2010,ALEX,6/24 - 7/2,95,946,Hurricane
+2010,BONNIE,7/22 - 7/25,40,1005,Tropical Storm
+2010,COLIN,8/2 - 8/8,50,1005,Tropical Storm
+2010,DANIELLE,8/21 - 9/3,115,942,Hurricane
+2010,EARL,8/24 - 9/6,125,927,Hurricane
+2010,FIONA,8/30 - 9/4,55,998,Tropical Storm
+2010,GASTON,9/1 - 9/8,35,1005,Tropical Storm
+2010,HERMINE,9/3 - 9/10,60,989,Tropical Storm
+2010,IGOR,9/8 - 9/23,135,924,Hurricane
+2010,JULIA,9/12 - 9/24,120,948,Hurricane
+2010,KARL,9/13 - 9/18,110,956,Hurricane
+2010,LISA,9/20 - 9/29,75,982,Hurricane
+2010,MATTHEW,9/23 - 9/26,50,998,Tropical Storm
+2010,NICOLE,9/28 - 9/30,40,994,Tropical Storm
+2010,NOT_NAMED,8/10 - 8/18,30,1007,Tropical Depression
+2010,NOT_NAMED,7/7 - 7/10,30,1005,Tropical Depression
+2010,OTTO,10/6 - 10/17,75,976,Hurricane
+2010,PAULA,10/11 - 10/15,90,981,Hurricane
+2010,RICHARD,10/19 - 10/26,85,977,Hurricane
+2010,SHARY,10/28 - 10/30,65,989,Hurricane
+2010,TOMAS,10/29 - 11/10,85,982,Hurricane
+2009,ANA,8/10 - 8/16,35,1003,Tropical Storm
+2009,BILL,8/15 - 8/26,115,943,Hurricane
+2009,CLAUDETTE,8/16 - 8/17,50,1005,Tropical Storm
+2009,DANNY,8/26 - 8/29,50,1006,Tropical Storm
+2009,ERIKA,9/1 - 9/4,45,1004,Tropical Storm
+2009,FRED,9/7 - 9/19,105,958,Hurricane
+2009,GRACE,9/27 - 10/6,55,986,Tropical Storm
+2009,HENRI,10/6 - 10/11,45,1005,Tropical Storm
+2009,IDA,11/4 - 11/11,90,975,Hurricane
+2009,NOT_NAMED,9/25 - 9/26,30,1008,Tropical Depression
+2009,NOT_NAMED,5/26 - 5/30,30,1006,Tropical Depression
+2008,ARTHUR,5/31 - 6/2,40,1004,Tropical Storm
+2008,BERTHA,7/3 - 7/21,110,952,Hurricane
+2008,CRISTOBAL,7/19 - 7/23,55,998,Tropical Storm
+2008,DOLLY,7/20 - 7/27,85,963,Hurricane
+2008,EDOUARD,8/3 - 8/6,55,996,Tropical Storm
+2008,FAY,8/15 - 8/28,60,986,Tropical Storm
+2008,GUSTAV,8/25 - 9/5,135,941,Hurricane
+2008,HANNA,8/28 - 9/8,75,977,Hurricane
+2008,IKE,9/1 - 9/15,125,935,Hurricane
+2008,JOSEPHINE,9/2 - 9/10,55,994,Tropical Storm
+2008,KYLE,9/25 - 9/30,75,984,Hurricane
+2008,LAURA,9/26 - 10/4,70,990,Tropical Storm
+2008,MARCO,10/6 - 10/7,55,998,Tropical Storm
+2008,NANA,10/12 - 10/15,35,1004,Tropical Storm
+2008,NOT_NAMED,10/14 - 10/16,25,1004,Tropical Depression
+2008,OMAR,10/13 - 10/21,115,958,Hurricane
+2008,PALOMA,11/5 - 11/14,125,944,Hurricane
+2007,ANDREA,5/6 - 5/14,65,998,Extratropical
+2007,BARRY,5/31 - 6/5,50,990,Tropical Storm
+2007,CHANTAL,7/31 - 8/5,60,964,Tropical Storm
+2007,DEAN,8/13 - 8/23,150,905,Hurricane
+2007,ERIN,8/15 - 8/19,50,995,Tropical Storm
+2007,FELIX,8/31 - 9/6,150,929,Hurricane
+2007,GABRIELLE,9/8 - 9/11,50,1004,Tropical Storm
+2007,HUMBERTO,9/12 - 9/14,80,985,Hurricane
+2007,INGRID,9/12 - 9/18,40,1002,Tropical Storm
+2007,JERRY,9/23 - 9/24,35,1003,Tropical Storm
+2007,KAREN,9/25 - 9/29,65,988,Hurricane
+2007,LORENZO,9/25 - 9/28,70,990,Hurricane
+2007,MELISSA,9/28 - 10/5,35,1005,Tropical Storm
+2007,NOEL,10/24 - 11/6,75,965,Hurricane
+2007,NOT_NAMED,10/11 - 10/17,45,996,Tropical Depression
+2007,NOT_NAMED,9/21 - 9/22,30,1005,Tropical Depression
+2007,OLGA,12/10 - 12/16,50,1003,Tropical Storm
+2006,ALBERTO,6/10 - 6/19,60,969,Tropical Storm
+2006,BERYL,7/18 - 7/22,50,1000,Tropical Storm
+2006,CHRIS,8/1 - 8/6,55,1001,Tropical Storm
+2006,DEBBY,8/21 - 8/28,45,999,Tropical Storm
+2006,ERNESTO,8/24 - 9/4,65,985,Hurricane
+2006,FLORENCE,9/3 - 9/19,80,963,Hurricane
+2006,GORDON,9/10 - 9/24,105,955,Hurricane
+2006,HELENE,9/12 - 9/27,105,955,Hurricane
+2006,ISAAC,9/27 - 10/3,75,985,Hurricane
+2006,NOT_NAMED,7/16 - 7/19,45,998,Tropical Storm
+2005,ALPHA,10/22 - 10/24,45,998,Tropical Storm
+2005,ARLENE,6/8 - 6/14,60,989,Tropical Storm
+2005,BETA,10/26 - 10/31,100,962,Hurricane
+2005,BRET,6/28 - 6/30,35,1002,Tropical Storm
+2005,CINDY,7/3 - 7/11,65,991,Hurricane
+2005,DELTA,11/19 - 11/29,60,980,Tropical Storm
+2005,DENNIS,7/4 - 7/18,130,930,Hurricane
+2005,EMILY,7/11 - 7/21,140,929,Hurricane
+2005,EPSILON,11/29 - 12/9,75,981,Hurricane
+2005,FRANKLIN,7/21 - 7/31,60,997,Tropical Storm
+2005,GAMMA,11/14 - 11/22,45,1002,Tropical Storm
+2005,GERT,7/23 - 7/25,40,1005,Tropical Storm
+2005,HARVEY,8/2 - 8/14,55,994,Tropical Storm
+2005,IRENE,8/4 - 8/18,90,970,Hurricane
+2005,JOSE,8/22 - 8/23,50,998,Tropical Storm
+2005,KATRINA,8/23 - 8/31,150,902,Hurricane
+2005,LEE,8/28 - 9/3,35,1006,Tropical Storm
+2005,MARIA,9/1 - 9/14,100,962,Hurricane
+2005,NATE,9/5 - 9/12,80,979,Hurricane
+2005,NOT_NAMED,10/8 - 10/14,40,1005,Tropical Low
+2005,NOT_NAMED,10/4 - 10/5,45,997,Tropical Low
+2005,NOT_NAMED,9/30 - 10/2,30,1006,Tropical Depression
+2005,NOT_NAMED,8/13 - 8/18,30,1008,Tropical Depression
+2005,OPHELIA,9/6 - 9/23,75,976,Hurricane
+2005,PHILIPPE,9/17 - 9/24,70,985,Hurricane
+2005,RITA,9/18 - 9/26,155,895,Hurricane
+2005,STAN,10/1 - 10/5,70,977,Hurricane
+2005,TAMMY,10/5 - 10/7,45,1001,Tropical Storm
+2005,VINCE,10/8 - 10/11,65,988,Hurricane
+2005,WILMA,10/15 - 10/26,160,882,Hurricane
+2005,ZETA,12/30 - 1/7,55,994,Tropical Storm
+2004,ALEX,7/31 - 8/6,105,957,Hurricane
+2004,BONNIE,8/3 - 8/14,55,1001,Tropical Storm
+2004,CHARLEY,8/9 - 8/15,130,941,Hurricane
+2004,DANIELLE,8/13 - 8/24,95,964,Hurricane
+2004,EARL,8/13 - 8/15,45,1009,Tropical Storm
+2004,FRANCES,8/25 - 9/10,125,935,Hurricane
+2004,GASTON,8/27 - 9/3,65,985,Hurricane
+2004,HERMINE,8/27 - 8/31,50,1002,Tropical Storm
+2004,IVAN,9/2 - 9/24,145,910,Hurricane
+2004,JEANNE,9/13 - 9/29,105,950,Hurricane
+2004,KARL,9/16 - 9/28,125,938,Hurricane
+2004,LISA,9/19 - 10/3,65,987,Hurricane
+2004,MATTHEW,10/8 - 10/11,40,997,Tropical Storm
+2004,NICOLE,10/10 - 10/11,45,986,Extratropical
+2004,NOT_NAMED,9/7 - 9/10,30,1009,Tropical Depression
+2004,OTTO,11/26 - 12/5,45,995,Tropical Storm
+2003,ANA,4/18 - 4/27,50,994,Tropical Storm
+2003,BILL,6/28 - 7/3,50,997,Tropical Storm
+2003,CLAUDETTE,7/7 - 7/17,80,979,Hurricane
+2003,DANNY,7/16 - 7/27,65,1000,Hurricane
+2003,ERIKA,8/14 - 8/17,65,986,Hurricane
+2003,FABIAN,8/27 - 9/9,125,939,Hurricane
+2003,GRACE,8/30 - 9/2,35,1007,Tropical Storm
+2003,HENRI,9/3 - 9/8,50,997,Tropical Storm
+2003,ISABEL,9/6 - 9/20,145,915,Hurricane
+2003,JUAN,9/24 - 9/29,90,969,Hurricane
+2003,KATE,9/25 - 10/10,110,952,Hurricane
+2003,LARRY,9/27 - 10/7,55,993,Tropical Storm
+2003,MINDY,10/10 - 10/14,40,1002,Tropical Storm
+2003,NICHOLAS,10/13 - 11/1,60,990,Tropical Storm
+2003,NOT_NAMED,9/8 - 9/10,30,1007,Tropical Depression
+2003,NOT_NAMED,8/21 - 8/22,30,1007,Tropical Depression
+2003,NOT_NAMED,7/25 - 7/27,30,1016,Tropical Depression
+2003,NOT_NAMED,7/19 - 7/21,30,1010,Tropical Depression
+2003,NOT_NAMED,6/11 - 6/11,30,1008,Tropical Depression
+2003,ODETTE,12/4 - 12/9,55,993,Tropical Storm
+2003,PETER,12/7 - 12/11,60,990,Tropical Storm
+2002,ARTHUR,7/14 - 7/19,50,992,Tropical Storm
+2002,BERTHA,8/4 - 8/9,35,1007,Tropical Storm
+2002,CRISTOBAL,8/5 - 8/8,45,999,Tropical Storm
+2002,DOLLY,8/29 - 9/4,50,997,Tropical Storm
+2002,EDOUARD,9/1 - 9/6,55,1002,Tropical Storm
+2002,FAY,9/5 - 9/11,50,998,Tropical Storm
+2002,GUSTAV,9/8 - 9/15,85,960,Hurricane
+2002,HANNA,9/12 - 9/15,50,1001,Tropical Storm
+2002,ISIDORE,9/14 - 9/27,110,934,Hurricane
+2002,JOSEPHINE,9/17 - 9/19,50,1004,Tropical Storm
+2002,KYLE,9/20 - 10/12,75,980,Hurricane
+2002,LILI,9/21 - 10/4,125,938,Hurricane
+2002,NOT_NAMED,10/14 - 10/16,30,1002,Tropical Depression
+2002,NOT_NAMED,9/7 - 9/8,30,1013,Tropical Depression
+2001,ALLISON,6/5 - 6/19,50,1000,Tropical Storm
+2001,BARRY,8/2 - 8/8,60,990,Tropical Storm
+2001,CHANTAL,8/14 - 8/22,60,997,Tropical Storm
+2001,DEAN,8/22 - 8/29,60,994,Tropical Storm
+2001,ERIN,9/1 - 9/17,105,968,Hurricane
+2001,FELIX,9/7 - 9/19,100,962,Hurricane
+2001,GABRIELLE,9/11 - 9/21,70,975,Hurricane
+2001,HUMBERTO,9/21 - 9/27,90,970,Hurricane
+2001,IRIS,10/4 - 10/9,125,948,Hurricane
+2001,JERRY,10/6 - 10/8,45,1004,Tropical Storm
+2001,KAREN,10/11 - 10/15,70,982,Hurricane
+2001,LORENZO,10/27 - 10/31,35,1007,Tropical Storm
+2001,MICHELLE,10/29 - 11/6,120,933,Hurricane
+2001,NOEL,11/4 - 11/6,65,986,Hurricane
+2001,NOT_NAMED,9/19 - 9/20,30,1005,Tropical Depression
+2001,NOT_NAMED,7/11 - 7/12,25,1010,Tropical Depression
+2001,OLGA,11/23 - 12/4,80,973,Hurricane
+2000,ALBERTO,8/3 - 8/25,110,950,Hurricane
+2000,BERYL,8/13 - 8/15,45,1007,Tropical Storm
+2000,CHRIS,8/17 - 8/19,35,1008,Tropical Storm
+2000,DEBBY,8/19 - 8/24,75,991,Hurricane
+2000,ERNESTO,9/1 - 9/3,35,1008,Tropical Storm
+2000,FLORENCE,9/10 - 9/17,70,985,Hurricane
+2000,GORDON,9/14 - 9/21,70,981,Hurricane
+2000,HELENE,9/15 - 9/25,60,986,Tropical Storm
+2000,ISAAC,9/21 - 10/4,120,943,Hurricane
+2000,JOYCE,9/25 - 10/2,80,975,Hurricane
+2000,KEITH,9/28 - 10/6,120,939,Hurricane
+2000,LESLIE,10/4 - 10/10,60,973,Tropical Storm
+2000,MICHAEL,10/15 - 10/20,85,965,Hurricane
+2000,NADINE,10/19 - 10/22,50,999,Tropical Storm
+2000,NOT_NAMED,10/25 - 10/29,55,976,Extratropical
+2000,NOT_NAMED,9/8 - 9/9,30,1008,Tropical Depression
+2000,NOT_NAMED,8/8 - 8/11,30,1009,Tropical Depression
+2000,NOT_NAMED,6/23 - 6/25,30,1008,Tropical Depression
+2000,NOT_NAMED,6/7 - 6/8,25,1008,Tropical Depression
+1999,ARLENE,6/11 - 6/18,50,1006,Tropical Storm
+1999,BRET,8/18 - 8/25,125,944,Hurricane
+1999,CINDY,8/19 - 8/31,120,942,Hurricane
+1999,DENNIS,8/24 - 9/8,90,962,Hurricane
+1999,EMILY,8/24 - 8/28,45,1004,Tropical Storm
+1999,FLOYD,9/7 - 9/19,135,921,Hurricane
+1999,GERT,9/11 - 9/23,130,930,Hurricane
+1999,HARVEY,9/19 - 9/22,50,994,Tropical Storm
+1999,IRENE,10/12 - 10/19,95,958,Hurricane
+1999,JOSE,10/17 - 10/25,85,979,Hurricane
+1999,KATRINA,10/28 - 11/1,35,999,Tropical Storm
+1999,LENNY,11/13 - 11/23,135,933,Hurricane
+1999,NOT_NAMED,10/6 - 10/8,30,1007,Tropical Depression
+1999,NOT_NAMED,10/4 - 10/6,30,1002,Tropical Depression
+1999,NOT_NAMED,9/5 - 9/7,30,1006,Tropical Depression
+1999,NOT_NAMED,7/2 - 7/3,30,1004,Tropical Depression
+1998,ALEX,7/27 - 8/2,45,1002,Tropical Storm
+1998,BONNIE,8/19 - 8/31,100,954,Hurricane
+1998,CHARLEY,8/21 - 8/24,60,1000,Tropical Storm
+1998,DANIELLE,8/24 - 9/8,90,960,Hurricane
+1998,EARL,8/31 - 9/8,85,964,Hurricane
+1998,FRANCES,9/8 - 9/13,55,990,Tropical Storm
+1998,GEORGES,9/15 - 10/1,135,937,Hurricane
+1998,HERMINE,9/17 - 9/20,40,999,Tropical Storm
+1998,IVAN,9/19 - 9/27,80,975,Hurricane
+1998,JEANNE,9/21 - 10/4,90,969,Hurricane
+1998,KARL,9/23 - 9/29,90,970,Hurricane
+1998,LISA,10/5 - 10/10,65,995,Hurricane
+1998,MITCH,10/22 - 11/9,155,905,Hurricane
+1998,NICOLE,11/24 - 12/2,75,979,Hurricane
+1997,ANA,6/30 - 7/5,40,1000,Tropical Storm
+1997,BILL,7/11 - 7/13,65,986,Hurricane
+1997,CLAUDETTE,7/13 - 7/16,40,1003,Tropical Storm
+1997,DANNY,7/16 - 7/27,70,984,Hurricane
+1997,ERIKA,9/3 - 9/19,110,946,Hurricane
+1997,FABIAN,10/4 - 10/8,40,1004,Tropical Storm
+1997,GRACE,10/14 - 10/17,40,999,Tropical Storm
+1997,NOT_NAMED,7/17 - 7/19,30,1008,Tropical Depression
+1997,NOT_NAMED,5/31 - 6/2,45,1003,Tropical Low
+1996,ARTHUR,6/17 - 6/23,45,992,Tropical Storm
+1996,BERTHA,7/5 - 7/17,100,960,Hurricane
+1996,CESAR,7/24 - 7/28,75,985,Hurricane
+1996,DOLLY,8/19 - 8/25,70,989,Hurricane
+1996,EDOUARD,8/19 - 9/6,125,933,Hurricane
+1996,FRAN,8/23 - 9/10,105,946,Hurricane
+1996,GUSTAV,8/26 - 9/2,40,1005,Tropical Storm
+1996,HORTENSE,9/3 - 9/16,120,935,Hurricane
+1996,ISIDORE,9/24 - 10/2,100,960,Hurricane
+1996,JOSEPHINE,10/4 - 10/16,60,970,Tropical Storm
+1996,KYLE,10/11 - 10/12,45,1001,Tropical Storm
+1996,LILI,10/14 - 10/29,100,960,Hurricane
+1996,MARCO,11/13 - 11/26,65,983,Hurricane
+1995,ALLISON,6/3 - 6/11,65,982,Hurricane
+1995,BARRY,7/5 - 7/10,60,989,Tropical Storm
+1995,CHANTAL,7/12 - 7/22,60,991,Tropical Storm
+1995,DEAN,7/28 - 8/2,40,999,Tropical Storm
+1995,ERIN,7/31 - 8/6,85,973,Hurricane
+1995,FELIX,8/8 - 8/25,120,929,Hurricane
+1995,GABRIELLE,8/9 - 8/12,60,988,Tropical Storm
+1995,HUMBERTO,8/22 - 9/1,95,968,Hurricane
+1995,IRIS,8/22 - 9/7,95,957,Hurricane
+1995,JERRY,8/22 - 8/28,35,1002,Tropical Storm
+1995,KAREN,8/26 - 9/3,45,1000,Tropical Storm
+1995,LUIS,8/28 - 9/12,130,935,Hurricane
+1995,MARILYN,9/12 - 10/1,100,949,Hurricane
+1995,NOEL,9/26 - 10/7,65,987,Hurricane
+1995,NOT_NAMED,9/9 - 9/13,30,1008,Tropical Depression
+1995,NOT_NAMED,8/5 - 8/7,30,1002,Tropical Depression
+1995,OPAL,9/27 - 10/6,130,916,Hurricane
+1995,PABLO,10/4 - 10/8,50,994,Tropical Storm
+1995,ROXANNE,10/7 - 10/21,100,956,Hurricane
+1995,SEBASTIEN,10/20 - 10/25,55,1001,Tropical Storm
+1995,TANYA,10/27 - 11/3,75,970,Hurricane
+1994,ALBERTO,6/30 - 7/7,55,993,Tropical Storm
+1994,BERYL,8/14 - 8/19,50,999,Tropical Storm
+1994,CHRIS,8/16 - 8/23,70,979,Hurricane
+1994,DEBBY,9/9 - 9/11,60,1006,Tropical Storm
+1994,ERNESTO,9/21 - 9/26,50,997,Tropical Storm
+1994,FLORENCE,11/2 - 11/8,95,972,Hurricane
+1994,GORDON,11/8 - 11/21,75,980,Hurricane
+1994,NOT_NAMED,9/29 - 9/30,30,1004,Tropical Depression
+1994,NOT_NAMED,9/27 - 9/29,30,1007,Tropical Depression
+1994,NOT_NAMED,9/24 - 9/26,30,1004,Tropical Depression
+1994,NOT_NAMED,8/29 - 8/31,30,1005,Tropical Depression
+1994,NOT_NAMED,7/20 - 7/21,30,1015,Tropical Depression
+1993,ARLENE,6/18 - 6/21,35,1000,Tropical Storm
+1993,BRET,8/4 - 8/11,50,1002,Tropical Storm
+1993,CINDY,8/14 - 8/17,40,1007,Tropical Storm
+1993,DENNIS,8/23 - 8/28,45,1000,Tropical Storm
+1993,EMILY,8/22 - 9/6,100,960,Hurricane
+1993,FLOYD,9/7 - 9/13,70,966,Hurricane
+1993,GERT,9/14 - 9/26,85,970,Hurricane
+1993,HARVEY,9/18 - 9/21,65,990,Hurricane
+1993,NOT_NAMED,9/29 - 9/30,30,1008,Tropical Depression
+1993,NOT_NAMED,5/31 - 6/3,35,999,Tropical Depression
+1992,ANDREW,8/16 - 8/28,150,922,Hurricane
+1992,BONNIE,9/17 - 10/2,95,965,Hurricane
+1992,CHARLEY,9/21 - 9/29,95,965,Hurricane
+1992,DANIELLE,9/22 - 9/26,55,1001,Tropical Storm
+1992,EARL,9/26 - 10/3,55,990,Tropical Storm
+1992,FRANCES,10/22 - 10/30,75,976,Hurricane
+1992,NOT_NAMED,9/25 - 10/1,30,1008,Tropical Depression
+1992,NOT_NAMED,7/24 - 7/26,30,1015,Tropical Depression
+1992,NOT_NAMED,6/25 - 6/26,30,1007,Tropical Depression
+1992,NOT_NAMED,4/21 - 4/24,45,1002,Subtropical Storm
+1991,ANA,6/29 - 7/5,45,1000,Tropical Storm
+1991,BOB,8/16 - 8/29,100,950,Hurricane
+1991,CLAUDETTE,9/4 - 9/14,115,944,Hurricane
+1991,DANNY,9/7 - 9/11,45,998,Tropical Storm
+1991,ERIKA,9/8 - 9/12,50,997,Tropical Storm
+1991,FABIAN,10/15 - 10/17,40,1002,Tropical Storm
+1991,GRACE,10/25 - 10/29,90,980,Hurricane
+1991,NOT_NAMED,10/28 - 11/2,65,972,Hurricane
+1991,NOT_NAMED,10/24 - 10/25,25,1009,Tropical Depression
+1991,NOT_NAMED,8/28 - 8/31,30,,Tropical Depression
+1991,NOT_NAMED,8/24 - 8/26,30,1009,Tropical Depression
+1991,NOT_NAMED,7/5 - 7/7,30,,Tropical Depression
+1990,ARTHUR,7/22 - 7/27,60,995,Tropical Storm
+1990,BERTHA,7/24 - 8/2,70,973,Hurricane
+1990,CESAR,7/31 - 8/7,45,1000,Tropical Storm
+1990,DIANA,8/4 - 8/9,85,980,Hurricane
+1990,EDOUARD,8/2 - 8/13,40,1003,Tropical Storm
+1990,FRAN,8/11 - 8/14,35,1007,Tropical Storm
+1990,GUSTAV,8/24 - 9/3,105,956,Hurricane
+1990,HORTENSE,8/25 - 8/31,55,993,Tropical Storm
+1990,ISIDORE,9/4 - 9/17,85,978,Hurricane
+1990,JOSEPHINE,9/21 - 10/6,75,980,Hurricane
+1990,KLAUS,10/3 - 10/9,70,985,Hurricane
+1990,LILI,10/6 - 10/15,65,987,Hurricane
+1990,MARCO,10/9 - 10/13,55,989,Tropical Storm
+1990,NANA,10/16 - 10/21,75,989,Hurricane
+1990,NOT_NAMED,9/18 - 9/27,30,,Tropical Depression
+1990,NOT_NAMED,5/24 - 5/26,25,,Tropical Depression
+1989,ALLISON,6/24 - 7/1,45,999,Tropical Storm
+1989,BARRY,7/9 - 7/14,45,1005,Tropical Storm
+1989,CHANTAL,7/30 - 8/3,70,984,Hurricane
+1989,DEAN,7/31 - 8/9,90,968,Hurricane
+1989,ERIN,8/18 - 8/27,90,968,Hurricane
+1989,FELIX,8/26 - 9/10,75,979,Hurricane
+1989,GABRIELLE,8/30 - 9/13,125,935,Hurricane
+1989,HUGO,9/10 - 9/25,140,918,Hurricane
+1989,IRIS,9/16 - 9/21,60,1001,Tropical Storm
+1989,JERRY,10/12 - 10/16,75,982,Hurricane
+1989,KAREN,11/28 - 12/4,50,1000,Tropical Storm
+1989,NOT_NAMED,10/2 - 10/5,30,,Tropical Depression
+1989,NOT_NAMED,8/27 - 8/28,25,,Tropical Depression
+1989,NOT_NAMED,8/8 - 8/17,30,,Tropical Depression
+1989,NOT_NAMED,6/15 - 6/17,25,,Tropical Depression
+1988,ALBERTO,8/5 - 8/8,35,1002,Tropical Storm
+1988,BERYL,8/8 - 8/10,45,1001,Tropical Storm
+1988,CHRIS,8/21 - 8/30,45,1005,Tropical Storm
+1988,DEBBY,8/31 - 9/8,65,987,Hurricane
+1988,ERNESTO,9/3 - 9/5,55,994,Tropical Storm
+1988,FLORENCE,9/7 - 9/11,70,982,Hurricane
+1988,GILBERT,9/8 - 9/20,160,888,Hurricane
+1988,HELENE,9/19 - 9/30,125,938,Hurricane
+1988,ISAAC,9/28 - 10/1,40,1005,Tropical Storm
+1988,JOAN:MIRIAM,10/10 - 11/2,125,932,Hurricane
+1988,KEITH,11/17 - 11/26,65,945,Tropical Storm
+1988,NOT_NAMED,10/19 - 10/21,30,,Tropical Depression
+1988,NOT_NAMED,9/27 - 9/29,25,,Tropical Depression
+1988,NOT_NAMED,9/7 - 9/10,50,994,Tropical Storm
+1988,NOT_NAMED,9/4 - 9/4,30,,Tropical Depression
+1988,NOT_NAMED,8/20 - 8/24,30,,Tropical Depression
+1988,NOT_NAMED,8/20 - 8/31,30,,Tropical Depression
+1988,NOT_NAMED,8/13 - 8/14,30,,Tropical Depression
+1988,NOT_NAMED,5/31 - 6/2,25,,Tropical Depression
+1987,ARLENE,8/8 - 8/28,65,987,Hurricane
+1987,BRET,8/18 - 8/24,45,1000,Tropical Storm
+1987,CINDY,9/5 - 9/10,45,1000,Tropical Storm
+1987,DENNIS,9/8 - 9/20,45,1000,Tropical Storm
+1987,EMILY,9/20 - 9/26,110,958,Hurricane
+1987,FLOYD,10/9 - 10/14,65,993,Hurricane
+1987,NOT_NAMED,10/31 - 11/4,30,,Tropical Depression
+1987,NOT_NAMED,9/13 - 9/17,30,,Tropical Depression
+1987,NOT_NAMED,9/7 - 9/8,30,,Tropical Depression
+1987,NOT_NAMED,9/6 - 9/8,30,,Tropical Depression
+1987,NOT_NAMED,8/30 - 9/2,30,,Tropical Depression
+1987,NOT_NAMED,8/13 - 8/15,30,,Tropical Depression
+1987,NOT_NAMED,8/9 - 8/17,40,1007,Tropical Storm
+1987,NOT_NAMED,5/24 - 6/1,30,,Tropical Depression
+1986,ANDREW,6/5 - 6/8,45,999,Tropical Storm
+1986,BONNIE,6/23 - 6/28,75,990,Hurricane
+1986,CHARLEY,8/13 - 8/30,70,980,Hurricane
+1986,DANIELLE,9/7 - 9/10,50,1000,Tropical Storm
+1986,EARL,9/10 - 9/20,90,979,Hurricane
+1986,FRANCES,11/18 - 11/21,75,1000,Hurricane
+1986,NOT_NAMED,9/1 - 9/4,30,,Tropical Depression
+1986,NOT_NAMED,8/30 - 9/4,30,,Tropical Depression
+1986,NOT_NAMED,8/4 - 8/5,30,,Tropical Depression
+1986,NOT_NAMED,7/23 - 7/28,30,,Tropical Depression
+1985,ANA,7/15 - 7/19,60,996,Tropical Storm
+1985,BOB,7/21 - 7/26,65,1002,Hurricane
+1985,CLAUDETTE,8/9 - 8/17,75,980,Hurricane
+1985,DANNY,8/12 - 8/20,80,987,Hurricane
+1985,ELENA,8/28 - 9/4,110,953,Hurricane
+1985,FABIAN,9/15 - 9/19,55,994,Tropical Storm
+1985,GLORIA,9/16 - 10/2,125,920,Hurricane
+1985,HENRI,9/21 - 9/25,50,996,Tropical Storm
+1985,ISABEL,10/7 - 10/15,60,997,Tropical Storm
+1985,JUAN,10/26 - 11/1,75,971,Hurricane
+1985,KATE,11/15 - 11/23,105,954,Hurricane
+1985,NOT_NAMED,12/7 - 12/9,30,,Tropical Depression
+1985,NOT_NAMED,9/11 - 9/13,30,,Tropical Depression
+1985,NOT_NAMED,9/8 - 9/13,30,,Tropical Depression
+1984,ARTHUR,8/28 - 9/5,45,1004,Tropical Storm
+1984,BERTHA,8/30 - 9/4,35,1007,Tropical Storm
+1984,CESAR,8/31 - 9/2,50,989,Tropical Storm
+1984,DIANA,9/8 - 9/16,115,949,Hurricane
+1984,EDOUARD,9/14 - 9/15,55,998,Tropical Storm
+1984,FRAN,9/15 - 9/20,55,994,Tropical Storm
+1984,GUSTAV,9/16 - 9/19,45,1006,Tropical Storm
+1984,HORTENSE,9/23 - 10/2,65,993,Hurricane
+1984,ISIDORE,9/25 - 10/1,50,999,Tropical Storm
+1984,JOSEPHINE,10/7 - 10/21,90,965,Hurricane
+1984,KLAUS,11/5 - 11/13,80,971,Hurricane
+1984,LILI,12/12 - 12/24,70,980,Hurricane
+1984,NOT_NAMED,11/23 - 11/28,30,,Tropical Depression
+1984,NOT_NAMED,10/25 - 10/28,30,,Tropical Depression
+1984,NOT_NAMED,9/6 - 9/8,30,,Tropical Depression
+1984,NOT_NAMED,8/18 - 8/21,50,1000,Subtropical Storm
+1984,NOT_NAMED,8/6 - 8/8,30,,Tropical Depression
+1984,NOT_NAMED,7/24 - 7/26,30,,Tropical Depression
+1984,NOT_NAMED,6/18 - 6/20,30,,Tropical Depression
+1984,NOT_NAMED,6/11 - 6/14,30,,Tropical Depression
+1983,ALICIA,8/15 - 8/21,100,962,Hurricane
+1983,BARRY,8/23 - 8/29,70,986,Hurricane
+1983,CHANTAL,9/10 - 9/15,65,994,Hurricane
+1983,DEAN,9/26 - 9/30,55,999,Tropical Storm
+1983,NOT_NAMED,7/27 - 8/2,30,,Tropical Depression
+1983,NOT_NAMED,7/23 - 7/28,30,,Tropical Depression
+1982,ALBERTO,6/2 - 6/6,75,985,Hurricane
+1982,BERYL,8/28 - 9/6,60,989,Tropical Storm
+1982,CHRIS,9/9 - 9/12,55,994,Tropical Storm
+1982,DEBBY,9/13 - 9/20,115,950,Hurricane
+1982,ERNESTO,9/30 - 10/3,60,997,Tropical Storm
+1982,NOT_NAMED,9/24 - 9/27,30,,Tropical Depression
+1982,NOT_NAMED,9/6 - 9/9,30,,Tropical Depression
+1982,NOT_NAMED,6/18 - 6/20,60,984,Extratropical
+1981,ARLENE,5/6 - 5/9,50,999,Tropical Storm
+1981,BRET,6/29 - 7/1,60,996,Tropical Storm
+1981,CINDY,8/2 - 8/5,50,1002,Tropical Storm
+1981,DENNIS,8/7 - 8/22,70,995,Hurricane
+1981,EMILY,8/31 - 9/12,80,966,Hurricane
+1981,FLOYD,9/3 - 9/12,100,975,Hurricane
+1981,GERT,9/7 - 9/15,90,988,Hurricane
+1981,HARVEY,9/11 - 9/20,115,946,Hurricane
+1981,IRENE,9/21 - 10/3,105,959,Hurricane
+1981,JOSE,10/29 - 11/2,45,998,Tropical Storm
+1981,KATRINA,11/3 - 11/7,75,980,Hurricane
+1981,NOT_NAMED,11/12 - 11/17,60,978,Subtropical Storm
+1981,NOT_NAMED,9/26 - 10/4,30,,Tropical Depression
+1981,NOT_NAMED,9/12 - 9/14,30,,Tropical Depression
+1981,NOT_NAMED,8/26 - 8/29,30,,Tropical Depression
+1981,NOT_NAMED,8/17 - 8/21,30,,Tropical Depression
+1981,NOT_NAMED,7/25 - 7/26,30,,Tropical Depression
+1981,NOT_NAMED,7/2 - 7/4,30,,Tropical Depression
+1981,NOT_NAMED,6/17 - 6/19,30,,Tropical Depression
+1981,NOT_NAMED,6/3 - 6/5,30,,Tropical Depression
+1981,NOT_NAMED,4/19 - 4/21,25,,Tropical Depression
+1981,NOT_NAMED,4/6 - 4/7,30,,Tropical Depression
+1980,ALLEN,7/31 - 8/11,165,899,Hurricane
+1980,BONNIE,8/14 - 8/19,85,975,Hurricane
+1980,CHARLEY,8/20 - 8/25,70,989,Hurricane
+1980,DANIELLE,9/4 - 9/7,50,1004,Tropical Storm
+1980,EARL,9/4 - 9/11,65,985,Hurricane
+1980,FRANCES,9/6 - 9/21,100,958,Hurricane
+1980,GEORGES,9/1 - 9/8,70,993,Hurricane
+1980,HERMINE,9/20 - 9/26,60,993,Tropical Storm
+1980,IVAN,10/1 - 10/12,90,970,Hurricane
+1980,JEANNE,11/7 - 11/16,85,986,Hurricane
+1980,KARL,11/25 - 11/28,75,985,Hurricane
+1980,NOT_NAMED,11/12 - 11/18,30,,Tropical Depression
+1980,NOT_NAMED,10/16 - 10/18,25,,Tropical Depression
+1980,NOT_NAMED,8/25 - 8/29,30,,Tropical Depression
+1980,NOT_NAMED,8/13 - 8/17,30,,Tropical Depression
+1980,NOT_NAMED,7/22 - 7/26,30,,Tropical Depression
+1980,NOT_NAMED,7/17 - 7/21,30,,Tropical Depression
+1980,NOT_NAMED,7/17 - 7/21,25,,Tropical Depression
+1979,ANA,6/19 - 6/24,50,1005,Tropical Storm
+1979,BOB,7/9 - 7/16,65,986,Hurricane
+1979,CLAUDETTE,7/15 - 7/29,45,997,Tropical Storm
+1979,DAVID,8/25 - 9/8,150,924,Hurricane
+1979,ELENA,8/30 - 9/2,35,1004,Tropical Storm
+1979,FREDERIC,8/29 - 9/15,115,943,Hurricane
+1979,GLORIA,9/4 - 9/15,85,975,Hurricane
+1979,HENRI,9/15 - 9/24,75,983,Hurricane
+1979,NOT_NAMED,11/7 - 11/10,30,,Tropical Depression
+1979,NOT_NAMED,10/24 - 10/29,30,,Tropical Depression
+1979,NOT_NAMED,10/23 - 10/25,65,980,Subtropical Storm
+1979,NOT_NAMED,10/12 - 10/20,30,,Tropical Depression
+1979,NOT_NAMED,9/16 - 9/21,30,,Tropical Depression
+1979,NOT_NAMED,9/1 - 9/6,30,,Tropical Depression
+1979,NOT_NAMED,8/25 - 8/28,30,,Tropical Depression
+1979,NOT_NAMED,7/31 - 8/6,30,,Tropical Depression
+1979,NOT_NAMED,7/23 - 7/26,30,,Tropical Depression
+1979,NOT_NAMED,7/10 - 7/13,30,,Tropical Depression
+1979,NOT_NAMED,7/8 - 7/13,25,,Tropical Depression
+1979,NOT_NAMED,6/11 - 6/16,30,,Tropical Depression
+1978,AMELIA,7/30 - 8/1,45,1005,Tropical Storm
+1978,BESS,8/5 - 8/8,45,1005,Tropical Storm
+1978,CORA,8/7 - 8/12,80,980,Hurricane
+1978,DEBRA,8/26 - 8/29,50,1000,Tropical Storm
+1978,ELLA,8/30 - 9/5,120,956,Hurricane
+1978,FLOSSIE,9/4 - 9/16,85,976,Hurricane
+1978,GRETA,9/13 - 9/20,115,947,Hurricane
+1978,HOPE,9/12 - 9/21,55,987,Tropical Storm
+1978,IRMA,10/2 - 10/5,45,1001,Tropical Storm
+1978,JULIET,10/7 - 10/11,45,1006,Tropical Storm
+1978,KENDRA,10/28 - 11/3,70,990,Hurricane
+1978,NOT_NAMED,11/3 - 11/5,25,,Tropical Depression
+1978,NOT_NAMED,10/26 - 10/29,25,,Tropical Depression
+1978,NOT_NAMED,10/13 - 10/17,30,,Tropical Depression
+1978,NOT_NAMED,9/21 - 9/23,30,,Tropical Depression
+1978,NOT_NAMED,9/18 - 9/29,30,,Tropical Depression
+1978,NOT_NAMED,9/8 - 9/10,30,,Tropical Depression
+1978,NOT_NAMED,9/3 - 9/11,30,,Tropical Depression
+1978,NOT_NAMED,8/30 - 9/1,30,,Tropical Depression
+1978,NOT_NAMED,8/9 - 8/10,25,,Tropical Depression
+1978,NOT_NAMED,8/7 - 8/11,30,,Tropical Depression
+1978,NOT_NAMED,7/10 - 7/12,30,,Tropical Depression
+1978,NOT_NAMED,6/21 - 6/22,25,,Tropical Depression
+1978,NOT_NAMED,1/18 - 1/23,40,1002,Subtropical Storm
+1977,ANITA,8/29 - 9/3,150,926,Hurricane
+1977,BABE,9/3 - 9/9,65,995,Hurricane
+1977,CLARA,9/5 - 9/12,65,993,Hurricane
+1977,DOROTHY,9/26 - 9/30,75,980,Hurricane
+1977,EVELYN,10/13 - 10/16,70,994,Hurricane
+1977,FRIEDA,10/16 - 10/19,50,1005,Tropical Storm
+1977,NOT_NAMED,10/24 - 10/25,30,,Tropical Depression
+1977,NOT_NAMED,10/3 - 10/5,30,,Tropical Depression
+1977,NOT_NAMED,10/1 - 10/3,30,,Tropical Depression
+1977,NOT_NAMED,9/22 - 9/23,25,,Tropical Depression
+1977,NOT_NAMED,9/17 - 9/19,25,,Tropical Depression
+1977,NOT_NAMED,8/1 - 8/4,30,,Tropical Depression
+1977,NOT_NAMED,7/25 - 7/26,25,,Tropical Depression
+1977,NOT_NAMED,7/18 - 7/19,30,,Tropical Depression
+1977,NOT_NAMED,6/13 - 6/14,25,,Tropical Depression
+1976,ANNA,7/28 - 8/6,45,999,Tropical Storm
+1976,BELLE,8/6 - 8/10,105,957,Hurricane
+1976,CANDICE,8/18 - 8/24,80,964,Hurricane
+1976,DOTTIE,8/18 - 8/21,45,996,Tropical Storm
+1976,EMMY,8/20 - 9/4,90,974,Hurricane
+1976,FRANCES,8/27 - 9/7,100,963,Hurricane
+1976,GLORIA,9/26 - 10/5,90,970,Hurricane
+1976,HOLLY,10/22 - 10/29,65,990,Hurricane
+1976,NOT_NAMED,10/12 - 10/15,30,,Tropical Depression
+1976,NOT_NAMED,10/3 - 10/12,30,,Tropical Depression
+1976,NOT_NAMED,9/26 - 9/28,30,,Tropical Depression
+1976,NOT_NAMED,9/22 - 9/24,25,,Tropical Depression
+1976,NOT_NAMED,9/20 - 9/27,30,,Tropical Depression
+1976,NOT_NAMED,9/13 - 9/17,40,1011,Subtropical Storm
+1976,NOT_NAMED,9/5 - 9/7,25,,Tropical Depression
+1976,NOT_NAMED,9/4 - 9/6,25,,Tropical Depression
+1976,NOT_NAMED,7/23 - 7/24,25,,Tropical Depression
+1976,NOT_NAMED,7/20 - 7/22,25,,Tropical Depression
+1976,NOT_NAMED,6/11 - 6/12,30,,Tropical Depression
+1976,NOT_NAMED,6/7 - 6/9,30,,Tropical Depression
+1976,NOT_NAMED,5/21 - 5/25,45,994,Subtropical Storm
+1975,AMY,6/27 - 7/4,60,981,Tropical Storm
+1975,BLANCHE,7/24 - 7/28,75,980,Hurricane
+1975,CAROLINE,8/24 - 9/1,100,963,Hurricane
+1975,DORIS,8/28 - 9/4,95,965,Hurricane
+1975,ELOISE,9/13 - 9/24,110,955,Hurricane
+1975,FAYE,9/18 - 9/29,90,977,Hurricane
+1975,GLADYS,9/22 - 10/4,120,939,Hurricane
+1975,HALLIE,10/24 - 10/28,45,1002,Tropical Storm
+1975,NOT_NAMED,12/9 - 12/13,60,985,Subtropical Storm
+1975,NOT_NAMED,11/29 - 12/1,25,,Tropical Depression
+1975,NOT_NAMED,11/8 - 11/12,30,,Tropical Depression
+1975,NOT_NAMED,10/27 - 10/29,25,,Tropical Depression
+1975,NOT_NAMED,10/14 - 10/17,30,,Tropical Depression
+1975,NOT_NAMED,10/3 - 10/5,25,,Tropical Depression
+1975,NOT_NAMED,9/25 - 9/29,25,,Tropical Depression
+1975,NOT_NAMED,9/11 - 9/14,30,,Tropical Depression
+1975,NOT_NAMED,9/6 - 9/7,25,,Tropical Depression
+1975,NOT_NAMED,9/3 - 9/6,30,,Tropical Depression
+1975,NOT_NAMED,9/3 - 9/9,30,,Tropical Depression
+1975,NOT_NAMED,7/28 - 7/30,30,,Tropical Depression
+1975,NOT_NAMED,7/25 - 7/26,25,,Tropical Depression
+1975,NOT_NAMED,7/4 - 7/5,25,,Tropical Depression
+1975,NOT_NAMED,6/24 - 6/29,30,,Tropical Depression
+1974,ALMA,8/12 - 8/15,55,1007,Tropical Storm
+1974,BECKY,8/26 - 9/2,100,977,Hurricane
+1974,CARMEN,8/29 - 9/10,130,928,Hurricane
+1974,DOLLY,9/2 - 9/5,45,1004,Tropical Storm
+1974,ELAINE,9/4 - 9/14,60,1001,Tropical Storm
+1974,FIFI:ORLENE,9/14 - 9/24,95,971,Hurricane
+1974,GERTRUDE,9/27 - 10/4,65,999,Hurricane
+1974,NOT_NAMED,11/10 - 11/12,25,,Tropical Depression
+1974,NOT_NAMED,10/30 - 11/2,25,,Tropical Depression
+1974,NOT_NAMED,10/4 - 10/9,45,1006,Tropical Depression
+1974,NOT_NAMED,9/23 - 9/27,30,,Tropical Depression
+1974,NOT_NAMED,9/18 - 9/20,25,,Tropical Depression
+1974,NOT_NAMED,9/2 - 9/11,30,,Tropical Depression
+1974,NOT_NAMED,8/24 - 8/26,30,,Tropical Depression
+1974,NOT_NAMED,8/10 - 8/15,50,992,Subtropical Storm
+1974,NOT_NAMED,7/16 - 7/20,45,1006,Extratropical
+1974,NOT_NAMED,7/13 - 7/17,30,,Tropical Depression
+1974,NOT_NAMED,6/30 - 7/2,30,,Tropical Depression
+1974,NOT_NAMED,6/22 - 6/26,25,,Tropical Depression
+1973,ALFA,7/30 - 8/2,40,1005,Subtropical Storm
+1973,ALICE,7/1 - 7/7,80,986,Hurricane
+1973,BRENDA,8/18 - 8/22,80,977,Hurricane
+1973,CHRISTINE,8/25 - 9/4,60,996,Tropical Storm
+1973,DELIA,9/1 - 9/7,60,986,Tropical Storm
+1973,ELLEN,9/14 - 9/23,100,962,Hurricane
+1973,FRAN,10/8 - 10/13,70,978,Hurricane
+1973,GILDA,10/16 - 10/30,60,968,Tropical Storm
+1973,NOT_NAMED,11/17 - 11/18,30,,Tropical Depression
+1973,NOT_NAMED,10/10 - 10/12,25,,Tropical Depression
+1973,NOT_NAMED,9/24 - 9/26,25,,Tropical Depression
+1973,NOT_NAMED,9/6 - 9/12,30,,Tropical Depression
+1973,NOT_NAMED,8/9 - 8/11,30,,Tropical Depression
+1973,NOT_NAMED,7/19 - 7/21,25,,Tropical Depression
+1973,NOT_NAMED,6/24 - 6/26,25,,Tropical Depression
+1973,NOT_NAMED,5/2 - 5/5,25,,Tropical Depression
+1973,NOT_NAMED,4/18 - 4/21,25,,Tropical Depression
+1972,AGNES,6/14 - 6/23,75,977,Hurricane
+1972,ALPHA,5/23 - 5/29,60,991,Subtropical Storm
+1972,BETTY,8/22 - 9/1,90,976,Hurricane
+1972,CARRIE,8/29 - 9/5,60,992,Tropical Storm
+1972,CHARLIE,9/19 - 9/22,60,944,Extratropical
+1972,DAWN,9/5 - 9/14,70,997,Hurricane
+1972,DELTA,11/1 - 11/7,40,1001,Subtropical Storm
+1972,NOT_NAMED,10/16 - 10/20,25,,Tropical Depression
+1972,NOT_NAMED,10/5 - 10/15,30,,Tropical Depression
+1972,NOT_NAMED,10/1 - 10/3,25,,Tropical Depression
+1972,NOT_NAMED,9/20 - 9/24,25,,Tropical Depression
+1972,NOT_NAMED,9/3 - 9/5,25,,Tropical Depression
+1972,NOT_NAMED,8/16 - 8/18,25,,Tropical Depression
+1972,NOT_NAMED,8/12 - 8/15,25,,Tropical Depression
+1972,NOT_NAMED,8/5 - 8/7,25,,Tropical Depression
+1972,NOT_NAMED,7/31 - 8/3,25,,Tropical Depression
+1972,NOT_NAMED,7/16 - 7/20,25,,Tropical Depression
+1972,NOT_NAMED,7/10 - 7/12,25,,Tropical Depression
+1972,NOT_NAMED,6/19 - 6/20,25,,Tropical Depression
+1971,ARLENE,7/4 - 7/8,55,1000,Tropical Storm
+1971,BETH,8/10 - 8/17,75,977,Hurricane
+1971,CHLOE,8/18 - 8/25,55,1004,Tropical Storm
+1971,DORIA,8/20 - 8/29,55,989,Tropical Storm
+1971,EDITH,9/5 - 9/18,140,943,Hurricane
+1971,FERN,9/3 - 9/13,80,978,Hurricane
+1971,GINGER,9/6 - 10/5,95,959,Hurricane
+1971,HEIDI,9/11 - 9/15,55,996,Tropical Storm
+1971,IRENE:OLIVIA,9/11 - 10/1,100,948,Hurricane
+1971,JANICE,9/21 - 9/24,55,1005,Tropical Storm
+1971,KRISTY,10/18 - 10/21,45,992,Tropical Storm
+1971,LAURA,11/12 - 11/22,60,994,Tropical Storm
+1971,NOT_NAMED,10/6 - 10/14,25,,Tropical Depression
+1971,NOT_NAMED,9/10 - 9/14,30,,Tropical Depression
+1971,NOT_NAMED,9/8 - 9/11,25,,Tropical Depression
+1971,NOT_NAMED,9/3 - 9/8,30,,Tropical Depression
+1971,NOT_NAMED,8/28 - 9/1,25,,Tropical Depression
+1971,NOT_NAMED,8/12 - 8/16,25,,Tropical Depression
+1971,NOT_NAMED,8/6 - 8/9,25,,Tropical Depression
+1971,NOT_NAMED,8/3 - 8/7,75,974,Hurricane
+1971,NOT_NAMED,7/10 - 7/11,25,,Tropical Depression
+1971,NOT_NAMED,7/7 - 7/8,25,,Tropical Depression
+2019,ANDREA,5/20 - 5/22,35,1006,Tropical Low
+2019,BARRY,7/10 - 7/16,65,993,Hurricane
+2019,CHANTAL,8/20 - 8/26,35,1007,Tropical Storm
+2019,DORIAN,8/24 - 9/9,160,910,Hurricane
+2019,ERIN,8/26 - 8/29,35,1002,Tropical Storm
+2019,FERNAND,9/3 - 9/5,45,1000,Tropical Storm
+2019,GABRIELLE,9/3 - 9/11,55,995,Tropical Storm
+2019,HUMBERTO,9/12 - 9/20,110,950,Hurricane
+2019,IMELDA,9/17 - 9/19,40,1003,Tropical Storm
+2019,JERRY,9/17 - 9/28,90,976,Hurricane
+2019,KAREN,9/22 - 9/27,40,1003,Tropical Storm
+2019,LORENZO,9/22 - 10/4,140,925,Hurricane
+2019,MELISSA,10/8 - 10/14,55,994,Tropical Storm
+2019,NESTOR,10/17 - 10/21,50,996,Tropical Storm
+2019,NOT_NAMED,10/14 - 10/17,30,1006,Tropical Depression
+2019,NOT_NAMED,7/22 - 7/23,30,1013,Tropical Depression
+2019,OLGA,10/25 - 10/27,45,992,Tropical Storm
+2019,PABLO,10/23 - 10/29,70,977,Hurricane
+2019,REBEKAH,10/27 - 11/1,70,965,Extratropical
+2019,SEBASTIEN,11/19 - 11/27,60,970,Tropical Storm
+2020,ALPHA,9/14 - 9/19,60,992,Extratropical
+2020,AMANDA,5/30 - 5/31,35,1003,Tropical Storm
+2020,ARTHUR,5/16 - 5/21,55,989,Tropical Storm
+2020,BERTHA,5/27 - 5/28,45,1005,Tropical Storm
+2020,BETA,9/17 - 9/25,55,993,Tropical Storm
+2020,CRISTOBAL,6/1 - 6/12,50,982,Tropical Storm
+2020,DELTA,10/4 - 10/11,120,953,Hurricane
+2020,DOLLY,6/22 - 6/25,40,1000,Tropical Storm
+2020,EDOUARD,7/4 - 7/9,40,1005,Tropical Storm
+2020,EPSILON,10/16 - 10/26,100,952,Hurricane
+2020,ETA,10/31 - 11/14,130,922,Hurricane
+2020,FAY,7/5 - 7/11,50,998,Tropical Storm
+2020,GAMMA,10/2 - 10/6,65,978,Hurricane
+2020,GONZALO,7/20 - 7/25,55,997,Tropical Storm
+2020,HANNA,7/23 - 7/26,80,973,Hurricane
+2020,IOTA,11/12 - 11/18,135,917,Hurricane
+2020,ISAIAS,7/28 - 8/5,80,986,Hurricane
+2020,JOSEPHINE,8/10 - 8/16,40,1004,Tropical Storm
+2020,KYLE,8/14 - 8/16,45,1000,Tropical Storm
+2020,LAURA,8/20 - 8/29,130,937,Hurricane
+2020,MARCO,8/20 - 8/25,65,991,Hurricane
+2020,NANA,9/1 - 9/4,65,994,Hurricane
+2020,NOT_NAMED,7/29 - 8/2,30,1008,Tropical Depression
+2020,OMAR,8/30 - 9/6,35,1003,Tropical Storm
+2020,PAULETTE,9/7 - 9/28,90,965,Hurricane
+2020,RENE,9/6 - 9/14,40,1001,Tropical Storm
+2020,SALLY,9/11 - 9/18,95,965,Hurricane
+2020,TEDDY,9/12 - 9/24,120,945,Hurricane
+2020,THETA,11/8 - 11/16,60,987,Tropical Storm
+2020,VICKY,9/14 - 9/19,45,1001,Tropical Storm
+2020,WILFRED,9/17 - 9/21,35,1006,Tropical Storm
+2020,ZETA,10/24 - 10/30,100,970,Hurricane
+2021,ANA,5/20 - 5/24,50,1004,Tropical Storm
+2021,BILL,6/13 - 6/16,55,992,Tropical Storm
+2021,CLAUDETTE,6/17 - 6/23,40,1003,Tropical Storm
+2021,DANNY,6/27 - 6/29,40,1009,Tropical Storm
+2021,ELSA,6/30 - 7/10,75,991,Hurricane
+2021,FRED,8/9 - 8/20,55,991,Tropical Storm
+2021,GRACE,8/13 - 8/21,105,967,Hurricane
+2021,HENRI,8/15 - 8/24,65,986,Hurricane
+2021,IDA,8/26 - 9/4,130,929,Hurricane
+2021,JULIAN,8/28 - 8/31,50,993,Tropical Storm
+2021,KATE,8/27 - 9/1,40,1004,Tropical Storm
+2021,LARRY,8/31 - 9/11,110,953,Hurricane
+2021,MINDY,9/8 - 9/10,50,1000,Tropical Storm
+2021,NICHOLAS,9/12 - 9/17,65,988,Hurricane
+2021,ODETTE,9/16 - 9/26,55,989,Tropical Storm
+2021,PETER,9/19 - 9/22,45,1005,Tropical Storm
+2021,ROSE,9/19 - 9/24,50,1004,Tropical Storm
+2021,SAM,9/22 - 10/7,135,927,Hurricane
+2021,TERESA,9/24 - 9/26,40,1008,Tropical Low
+2021,VICTOR,9/29 - 10/4,55,997,Tropical Storm
+2021,WANDA,10/25 - 11/8,60,973,Tropical Storm
+2022,ALEX,6/2 - 6/6,60,984,Tropical Storm
+2022,BONNIE,6/27 - 7/9,100,964,Hurricane
+2022,COLIN,7/2 - 7/3,35,1012,Tropical Storm
+2022,Danielle,9/1 - 9/8,80,1013,Hurricane
+2022,Earl,9/2 - 9/10,90,1005,Hurricane
+2022,Eleven,9/28 - 9/29,30,1010,Tropical Depression
+2022,Fiona,9/14 - 9/24,115,1009,Hurricane
+2022,Four,8/19 - 8/20,30,1010,Potential Tropical Cyclone
+2022,Gaston,9/20 - 9/26,55,1013,Tropical Storm
+2022,Hermine,9/23 - 9/25,35,1008,Tropical Storm
+2022,Ian,9/23 - 10/1,135,1010,Hurricane
+2022,Julia,10/6 - 10/10,75,1006,Hurricane
+2022,Karl,10/11 - 10/15,50,1008,Tropical Storm
+2022,Lisa,10/30 - 11/5,75,1009,Hurricane
+2022,Martin,11/1 - 11/3,75,997,Hurricane
+2022,Nicole,11/7 - 11/11,65,1004,Hurricane
+2022,Twelve,10/4 - 10/6,30,1010,Tropical Depression
+2023,Arlene,6/1 - 6/3,35,1007,Tropical Storm
+2023,Bret,6/19 - 6/24,60,1009,Tropical Storm
+2023,Cindy,6/22 - 6/25,50,1011,Tropical Storm
+2023,Don,7/14 - 7/24,65,1011,Hurricane
+2023,Emily,8/20 - 8/21,45,1006,Tropical Storm
+2023,Franklin,8/20 - 9/1,130,1004,Hurricane
+2023,Gert,8/19 - 9/4,50,1008,Tropical Storm
+2023,Harold,8/21 - 8/23,45,1010,Tropical Storm
+2023,Idalia,8/26 - 9/2,115,1006,Hurricane
+2023,Jose,8/29 - 9/1,50,1014,Tropical Storm
+2023,Katia,9/1 - 9/4,50,1010,Tropical Storm
+2023,Lee,9/5 - 9/17,145,1008,Hurricane
+2023,Margot,9/7 - 9/17,80,1005,Hurricane
+2023,Nigel,9/15 - 9/22,85,1007,Hurricane
+2023,Ophelia,9/21 - 9/24,60,1012,Tropical Storm
+2023,Philippe,9/23 - 10/6,45,1007,Tropical Storm
+2023,Rina,9/28 - 10/1,45,1010,Tropical Storm
+2023,Sean,10/10 - 10/15,40,1011,Tropical Storm
+2023,Tammy,10/18 - 10/29,90,1007,Hurricane
+2023,Twenty-One,10/23 - 10/24,25,1007,Tropical Depression
+2023,Twenty-Two,11/16 - 11/17,30,1006,Potential Tropical Cyclone
+2024,Alberto,6/17 - 6/20,45,1001,Tropical Storm
+2024,Chris,6/30 - 7/1,35,1007,Tropical Storm
+2024,Eight,9/15 - 9/16,45,1006,Potential Tropical Cyclone
+2024,Ernesto,8/11 - 8/20,85,1010,Hurricane
+2024,Gordon,9/11 - 9/17,40,1007,Tropical Storm
+2024,Isaac,9/25 - 9/30,90,997,Hurricane
+2024,Joyce,9/27 - 9/30,45,1006,Tropical Storm
+2024,Kirk,9/29 - 10/7,125,1006,Hurricane
+2024,Leslie,10/2 - 10/10,90,1006,Hurricane
+2024,Milton,10/5 - 10/10,155,1007,Hurricane
