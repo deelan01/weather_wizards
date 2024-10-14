@@ -1,0 +1,17 @@
+{
+    "postgres_connection": {
+        "user": "manahil",
+        "password": "Apple123",
+        "server": "localhost",
+        "port": "5433"
+    },
+    "mongodb_cluster": {
+        "user": "manahilr701",
+        "password": "minilben1F",
+        "server": "altas"
+    },
+    "mongodb_local": {
+        "user": "YOUR_USER_ID_HERE",
+        "password": "YOUR_PASSWORD_HERE"
+    }
+}
