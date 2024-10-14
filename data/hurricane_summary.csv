@@ -1,4 +1,4 @@
-Year,Storm, Dates , Max Winds (mph) , Min pressure (mb) , Maximum Strength 
+year,storm, dates , max_winds_mph , min_pressure_mb , maximum_strength 
 2018,ALBERTO,5/25 - 5/31,55,990,Tropical Storm
 2018,BERYL,7/4 - 7/17,70,991,Hurricane
 2018,CHRIS,7/5 - 7/17,90,969,Hurricane

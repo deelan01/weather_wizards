@@ -127,7 +127,8 @@ CREATE TABLE IF NOT EXISTS public.weather_event_type
 (
     weather_event_type_id serial NOT NULL,
     weather_event_type character varying(50) COLLATE pg_catalog."default" NOT NULL,
-    CONSTRAINT weather_event_type_pkey PRIMARY KEY (weather_event_type_id)
+    CONSTRAINT weather_event_type_pkey PRIMARY KEY (weather_event_type_id),
+    CONSTRAINT weather_event_type_unq UNIQUE (weather_event_type)
 );
 
 ALTER TABLE IF EXISTS public.weather_event
