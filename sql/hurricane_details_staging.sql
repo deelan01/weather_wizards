@@ -1,5 +1,3 @@
--- Table: public.hurricane_name_data_staging
-
 DROP TABLE IF EXISTS public.hurricane_name_data_staging;
 
 CREATE TABLE IF NOT EXISTS public.hurricane_name_data_staging

@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+hurricane_name,date,time,lat,lon,wind_mph,pressure_mb,storm_type 
+=======
+<<<<<<< HEAD
 Hurricane_Name,Date, Time , Lat , Lon , Wind(mph) , Pressure(mb) , Storm Type 
+=======
+hurricane_name,date,time,lat,lon,wind_mph,pressure_mb,storm_type 
+>>>>>>> Manahil
+>>>>>>> 48daf2d44765cb1fdd12de8e2d1ed041097cb72d
 Florence,8/30/2018,6:00:00 AM,12.80,-16.90,23,1008,Tropical Low
 Florence,8/30/2018,9:00:00 AM,12.81,-17.39,25,1007,Tropical Low
 Florence,8/30/2018,12:00:00 PM,12.80,-17.90,29,1007,Tropical Low

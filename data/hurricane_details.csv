@@ -1,4 +1,4 @@
-Hurricane_Name,Date, Time , Lat , Lon , Wind(mph) , Pressure(mb) , Storm Type 
+hurricane_name,date,time,lat,lon,wind_mph,pressure_mb,storm_type 
 Hurricane-Andrea,5/20/2019,6:00:00 PM,28.10,-68.60,40,1008,Subtropical Storm
 Hurricane-Andrea,5/20/2019,9:00:00 PM,28.62,-68.70,40,1007,Subtropical Storm
 Hurricane-Andrea,5/21/2019,12:00:00 AM,29.10,-68.80,40,1006,Subtropical Storm
