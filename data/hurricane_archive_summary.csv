@@ -1,4 +1,4 @@
-Year,Storms,Hurricanes,Deaths,Damage (millions USD),Retired Names
+year,storms,hurricanes,deaths,damage_millions_usd,retired_names
 2018,15,8,173,"50,205","2  -  Florence, Michael"
 2017,17,10,3364,"294,67","4  -  Harvey, Irma, Maria, Nate"
 2016,15,7,748,"17,490","2  -  Matthew, Otto"
