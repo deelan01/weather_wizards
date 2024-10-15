@@ -168,7 +168,8 @@ def postgresRunSqlScript(db_name, sql_file):
 
 def postgresImportFile(db_name, table_name, file_location, delimiter=',', headerline=True):
     """
-    Imports data from a specified file into a PostgreSQL table.
+    Imports data from a specified file into a PostgreSQL table, and compares the number of records in the file 
+    to the number of records actually inserted into the table, taking into account records already present.
 
     Args:
         db_name (str): The name of the PostgreSQL database.
@@ -178,41 +179,64 @@ def postgresImportFile(db_name, table_name, file_location, delimiter=',', header
         headerline (bool): Indicates if the first line of the file contains headers (default is True).
 
     Returns:
-        int: The number of records successfully imported into the table.
+        str: A success or warning message.
+        int: The number of records imported into the table.
     """
     # Get PostgreSQL credentials and establish a connection
     postgres_uri = postgresGetCredentials(engine_type="psycopg2")
 
-    # Use a context manager to handle the connection and cursor
     try:
+        # Open the file and calculate the number of records in it
+        with open(file_location, 'r') as file:
+            reader = csv.reader(file, delimiter=delimiter)
+            
+            if headerline:
+                next(reader)  # Skip header line if necessary
+            
+            file_record_count = sum(1 for row in reader)  # Count the rows in the file
+            
         with psycopg2.connect(f"{postgres_uri} dbname='{db_name}'") as conn:
+            conn.autocommit = False
+
             with conn.cursor() as cursor:
-                # Open the file and read the header and contents
+                # Count the records in the table before import
+                cursor.execute(f"SELECT COUNT(*) FROM {table_name};")
+                table_record_count_before = cursor.fetchone()[0]
+
+                # Open the file again for the COPY command
                 with open(file_location, 'r') as file:
-                    reader = csv.reader(file, delimiter=delimiter)
-                    
-                    # Read headers if they exist
                     if headerline:
-                        headers = next(reader)
-                        headers_str = ', '.join(headers)  # Convert header list to string
+                        headers = next(file)  # Skip header line if necessary
+                        headers_str = ', '.join(headers.strip().split(delimiter))  # Convert header list to string
                         sql_copy = f"COPY {table_name} ({headers_str}) FROM STDIN WITH CSV HEADER DELIMITER '{delimiter}';"
                     else:
                         sql_copy = f"COPY {table_name} FROM STDIN WITH CSV DELIMITER '{delimiter}';"
-                    
+
                     # Move the file pointer back to the beginning to reuse in COPY
                     file.seek(0)
-
-                    # Execute the COPY command with file data
                     cursor.copy_expert(sql_copy, file)
 
-                # Count the number of records in the table after import
-                cursor.execute(f"SELECT COUNT(*) FROM {table_name};")
-                record_count = cursor.fetchone()[0]
-                logging.info(f"Imported {record_count} records into table {table_name}.")
+                # Commit the transaction after COPY operation
+                conn.commit()
 
-                return record_count
+                # Count the records in the table after import
+                cursor.execute(f"SELECT COUNT(*) FROM {table_name};")
+                table_record_count_after = cursor.fetchone()[0]
+
+                # Calculate the number of new records inserted
+                records_inserted = table_record_count_after - table_record_count_before
+
+                # Handle success and error logging
+                if records_inserted == file_record_count:
+                    logging.info(f"Successfully imported {records_inserted} new records into table {table_name}.")
+                    return f"Successfully imported {file_record_count} records from {file_location} into {table_name}.", records_inserted
+                else:
+                    logging.warning(f"Imported records mismatch: expected {file_record_count}, but added {records_inserted}.")
+                    return f"Warning: Imported records mismatch. Expected {file_record_count}, but added {records_inserted}.", records_inserted
 
     except psycopg2.Error as e:
+        # Rollback transaction if an error occurs
+        if conn:
+            conn.rollback()
         logging.error(f"Error importing file {file_location} into table {table_name}: {e}")
-        return 0
-
+        return f"Error: Failed to import {file_location} into {table_name}.", 0
