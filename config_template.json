@@ -1,17 +1,17 @@
 {
     "postgres_connection": {
-        "user": "YOUR_USER_ID_HERE",
-        "password": "YOUR_PASSWORD_HERE",
-        "server": "YOUR_SERVER_HERE",
-        "port": "YOUR_PORT_HERE"
+        "user": "",
+        "password": "",
+        "server": "",
+        "port": ""
     },
     "mongodb_cluster": {
-        "user": "YOUR_USER_ID_HERE",
-        "password": "YOUR_PASSWORD_HERE",
-        "server": "YOUR_SERVER_HERE"
+        "user": "",
+        "password": "",
+        "server": ""
     },
     "mongodb_local": {
-        "user": "YOUR_USER_ID_HERE",
-        "password": "YOUR_PASSWORD_HERE"
+        "user": "",
+        "password": ""
     }
 }
