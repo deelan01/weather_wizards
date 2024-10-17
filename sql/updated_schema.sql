@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS public.region (
     state VARCHAR(2) NOT NULL CHECK (LENGTH(state) = 2),  -- Standard US State Code Length
     zip VARCHAR(10) CHECK (LENGTH(zip) BETWEEN 5 AND 10), -- ZIP or ZIP+4 formats
     population_size INTEGER CHECK (population_size >= 0), -- Ensures population size is non-negative
-    latitude INTEGER NOT NULL,
-    longitude INTEGER NOT NULL,
+    latitude DOUBLE PRECISION NOT NULL,
+    longitude DOUBLE PRECISION NOT NULL,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW(),
     CONSTRAINT region_unique_city_state_zip UNIQUE (city, state, zip) -- Ensures no duplicate city/state/zip combinations
@@ -94,8 +94,8 @@ CREATE TABLE IF NOT EXISTS public.weather_event_radar (
     radar_event_id SERIAL PRIMARY KEY,
     weather_event_id INTEGER REFERENCES weather_event(event_id) ON DELETE CASCADE,
     radar_id INTEGER REFERENCES radar_station(radar_id) ON DELETE CASCADE,
-    latitude INTEGER NOT NULL,
-    longitude INTEGER NOT NULL,
+    latitude DOUBLE PRECISION NOT NULL,
+    longitude DOUBLE PRECISION NOT NULL,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW(),
     CONSTRAINT weather_event_radar_unique UNIQUE (weather_event_id, radar_id, latitude, longitude)
