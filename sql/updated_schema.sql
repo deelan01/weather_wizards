@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS public.weather_event_type
 (
     weather_event_type_id serial NOT NULL PRIMARY KEY,
     weather_event_type VARCHAR(50) UNIQUE NOT NULL,
+    weather_event_type_code VARCHAR(5) UNIQUE NOT NULL,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW()
 );
@@ -56,7 +57,6 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
     event_id SERIAL PRIMARY KEY,
     weather_event_name VARCHAR(100) NOT NULL,
     weather_event_type_id INTEGER REFERENCES weather_event_type(weather_event_type_id) ON DELETE CASCADE,
-    radar_id INTEGER REFERENCES radar_station(radar_id) ON DELETE SET NULL,
     region_id INTEGER REFERENCES region(region_id) ON DELETE SET NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
