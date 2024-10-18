@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS public.weather_event_type
 (
     weather_event_type_id serial NOT NULL PRIMARY KEY,
     weather_event_type VARCHAR(50) UNIQUE NOT NULL,
+    weather_event_type_code VARCHAR(5) UNIQUE NOT NULL,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW()
 );
