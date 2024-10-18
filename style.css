@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F4F8; /* Light background */
+    color: #333; /* Darker text */
+}
+
+.header {
+    background-color: #0077B6; /* Blue header */
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #023E8A; /* Dark blue sidebar */
+    padding: 20px;
+    color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.sidebar nav ul li:hover {
+    background-color: #0096C7;
+    transform: scale(1.05);
+}
+
+.sidebar nav ul li i {
+    font-size: 20px;
+}
+
+/* Content Section */
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #FFFFFF; /* White background */
+    overflow-y: auto;
+    border-radius: 12px 0 0 12px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+#content-container h2 {
+    margin-top: 0;
+    color: #0077B6;
+}
+
+#content-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #495057;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        box-shadow: none;
+    }
+}
+/* Styling for Overview Text */
+.overview-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 15px 0;
+    color: #495057;
+    text-align: justify;
+}
+
+/* Optional: Add spacing between sections */
+.overview-content img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.sources-list, .contributors-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sources-list li, .contributors-list li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.source-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.contributors-list li i {
+    margin-right: 10px;
+    color: #555;
+}
