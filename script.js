@@ -12,139 +12,225 @@ document.addEventListener('DOMContentLoaded', () => {
         tab.addEventListener('click', () => {
             const tabName = tab.getAttribute('data-tab').trim();
             showTab(tabName);
+
+            if (tabName === 'historical') initializeHistoricalVisualizations();
+            if (tabName === 'damage') initializeDamageCharts();
         });
     });
 
-    // Function to display the selected tab content and hide others
     function showTab(tabName) {
         tabContents.forEach(content => {
             content.style.display = content.id === tabName ? 'block' : 'none';
         });
     }
 
-    // Initialize the Historical Storm Events visualizations when the tab is selected
-    document.querySelector('.tab[data-tab="historical"]').addEventListener('click', async () => {
-        await initializeHistoricalVisualizations();
-    });
-
-    // Initialize the Historical Storm Events tab
-    async function initializeHistoricalVisualizations() {
-        const years = await loadAvailableYears();
-        const yearDropdown = document.getElementById('yearDropdown');
-
-        // Populate the year dropdown with available years
-        yearDropdown.innerHTML = '<option value="" disabled selected>Select a Year</option>';
-        years.forEach(year => {
-            const option = document.createElement('option');
-            option.value = year;
-            option.textContent = year;
-            yearDropdown.appendChild(option);
-        });
-
-        yearDropdown.addEventListener('change', () => {
-            const selectedYear = yearDropdown.value;
-            console.log(`Selected Year: ${selectedYear}`);
-            updateSeasonalChart(selectedYear);
-            updateHeatmap(selectedYear);
-        });
-    }
-
-    // Load available years from the CSV files
-    async function loadAvailableYears() {
-        try {
-            const summaryData = await d3.csv('data/hurricane_summary.csv');
-            const detailData = await d3.csv('data/hurricane_details_with_location.csv');
-
-            const summaryYears = summaryData.map(d => +d.year);
-            const detailYears = detailData.map(d => new Date(d.start_date).getFullYear());
-
-            const uniqueYears = Array.from(new Set([...summaryYears, ...detailYears])).sort((a, b) => a - b);
-            console.log('Available Years:', uniqueYears);
-            return uniqueYears;
-        } catch (error) {
-            console.error('Error loading CSV files:', error);
-            return [];
-        }
-    }
-
-    // Update the seasonal chart based on the selected year
-    async function updateSeasonalChart(year) {
-        try {
-            const data = await d3.csv('data/hurricane_summary.csv');
-            const filteredData = data.filter(d => +d.year === +year);
-
-            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            const monthlyCounts = Array(12).fill(0);
-
-            filteredData.forEach(d => {
-                const month = new Date(d.start_date).getMonth();
-                monthlyCounts[month]++;
-            });
-
-            const chart = echarts.init(document.getElementById('seasonalChart'));
-            chart.clear(); // Clear any previous data
-            chart.setOption({
-                title: { text: `Seasonal Patterns (${year})`, left: 'center' },
-                xAxis: { type: 'category', data: months },
-                yAxis: { type: 'value', name: 'Storm Count' },
-                series: [{ type: 'bar', data: monthlyCounts }]
-            });
-        } catch (error) {
-            console.error('Error updating seasonal chart:', error);
-        }
-    }
-
-    // Update the heatmap based on the selected year
-    async function updateHeatmap(year) {
-        try {
-            const data = await d3.csv('data/hurricane_details_with_location.csv');
-            const filteredData = data.filter(d => new Date(d.start_date).getFullYear() === +year);
-
-            const heatmapData = filteredData
-                .map(d => [+d.latitude, +d.longitude, +d.wind_speed])
-                .filter(entry => entry.every(val => !isNaN(val) && val !== undefined));
-
-            console.log('Filtered Heatmap Data:', heatmapData);
-
-            if (heatmapData.length === 0) {
-                console.warn(`No valid data available for the year ${year}`);
-                alert(`No valid data found for the selected year: ${year}`);
-                return;
-            }
-
-            const chart = echarts.init(document.getElementById('intensityHeatmap'));
-            chart.clear(); // Clear any previous data
-            chart.setOption({
-                title: { text: `Storm Intensity Heatmap (${year})`, left: 'center' },
-                tooltip: {
-                    trigger: 'item',
-                    formatter: params =>
-                        `Lat: ${params.value[0]}, Lon: ${params.value[1]}<br>Wind Speed: ${params.value[2]} mph`
-                },
-                visualMap: {
-                    min: 0,
-                    max: Math.max(...heatmapData.map(d => d[2])),
-                    calculable: true,
-                    orient: 'horizontal',
-                    left: 'center',
-                    bottom: '15%'
-                },
-                series: [{
-                    type: 'heatmap',
-                    data: heatmapData,
-                    emphasis: {
-                        itemStyle: {
-                            shadowBlur: 10,
-                            shadowColor: 'rgba(0, 0, 0, 0.5)'
-                        }
+    // Initialize Hurricane Damage Charts
+   
+        function initializeDamageCharts() {
+            if (document.getElementById('damageLineChart')) {
+                const damageLineChart = echarts.init(document.getElementById('damageLineChart'));
+                const damageBarChart = echarts.init(document.getElementById('damageBarChart'));
+                const choroplethChart = echarts.init(document.getElementById('damageChoroplethChart'));
+                const pieChart = echarts.init(document.getElementById('damagePieChart'));
+        
+                // Set options for each chart (no changes in the options logic)
+                damageLineChart.setOption({ 
+                    title: { text: 'Damage Cost Over the Years', left: 'center' },
+                    xAxis: { type: 'category', data: [2000, 2005, 2010, 2015, 2020] },
+                    yAxis: { type: 'value', name: 'Damage (in Billion USD)' },
+                    series: [{ data: [10, 25, 15, 30, 45], type: 'line', smooth: true }],
+                });
+        
+                damageBarChart.setOption({
+                    title: {
+                        text: 'Damage Types Comparison',
+                        left: 'center',
+                        top: 10,  // Add some margin space above the title
+                    },
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { type: 'shadow' },
+                    },
+                    legend: {
+                        data: ['Property', 'Infrastructure'],
+                        top: 50,  // Add space below the title to avoid overlap
+                        left: 'center',
+                    },
+                    grid: {
+                        top: 100,  // Adjust grid position to avoid overlap with legend
+                        left: '10%',
+                        right: '10%',
+                        bottom: '10%',
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: [2000, 2005, 2010, 2015, 2020],
+                    },
+                    yAxis: {
+                        type: 'value',
+                        name: 'Damage (in Billion USD)',
+                    },
+                    series: [
+                        {
+                            name: 'Property',
+                            type: 'bar',
+                            stack: 'Total',
+                            data: [5, 10, 8, 12, 18],
+                        },
+                        {
+                            name: 'Infrastructure',
+                            type: 'bar',
+                            stack: 'Total',
+                            data: [5, 15, 7, 18, 27],
+                        },
+                    ],
+                });
+                
+        
+                function initializeChoroplethChart() {
+                    try {
+                        const chart = echarts.init(document.getElementById('damageChoroplethChart'));
+                
+                        // Ensure the map is registered properly (only if using GeoJSON manually)
+                        echarts.registerMap('USA', {});
+                
+                        chart.setOption({
+                            title: { 
+                                text: 'Regional Damage Visualization', 
+                                left: 'center',
+                                top: 10
+                            },
+                            tooltip: { 
+                                trigger: 'item', 
+                                formatter: '{b}<br/>Total Damage: {c} Billion USD' 
+                            },
+                            visualMap: { 
+                                min: 0, 
+                                max: 50, 
+                                left: 'center', 
+                                bottom: '10%', 
+                                text: ['High', 'Low'], 
+                                calculable: true 
+                            },
+                            series: [{
+                                type: 'map',
+                                map: 'USA',  // Make sure 'USA' map is registered/loaded correctly
+                                label: {
+                                    show: true,
+                                    formatter: '{b}', // Show state names on the map
+                                },
+                                data: [
+                                    { name: 'Florida', value: 20 },
+                                    { name: 'Texas', value: 15 },
+                                    { name: 'Louisiana', value: 25 },
+                                ],
+                                emphasis: {
+                                    label: { show: true },
+                                    itemStyle: { 
+                                        areaColor: '#f4a460' 
+                                    },
+                                },
+                            }]
+                        });
+                
+                    } catch (error) {
+                        console.error('Error initializing Choropleth Chart:', error);
                     }
-                }]
-            });
-        } catch (error) {
-            console.error('Error updating heatmap:', error);
+                }
+                
+        
+                pieChart.setOption({ 
+                    title: { text: 'Percentage Breakdown of Damage Types', left: 'center' },
+                    series: [{
+                        type: 'pie',
+                        radius: '50%',
+                        data: [
+                            { value: 60, name: 'Property Damage' },
+                            { value: 40, name: 'Infrastructure Damage' },
+                        ],
+                    }],
+                });
+            }
         }
+        
+
+    // Initialize Historical Storm Events Charts
+    function initializeHistoricalVisualizations() {
+        initializeLineChart();
+        initializeBarChart();
+        initializeRadarChart();
+        initializePieChart();
+        initializeHeatmap();
     }
 
-    // Load the overview tab by default on page load
+    function initializeLineChart() {
+        const chart = echarts.init(document.getElementById('stormLineChart'));
+        chart.setOption({
+            title: { text: 'Number of Storms by Year', left: 'center' },
+            xAxis: { type: 'category', data: [2000, 2001, 2002, 2003, 2004] },
+            yAxis: { type: 'value', name: 'Number of Storms' },
+            series: [{ type: 'line', data: [10, 15, 8, 12, 20], smooth: true, areaStyle: {} }],
+        });
+    }
+
+    function initializeBarChart() {
+        const chart = echarts.init(document.getElementById('stormBarChart'));
+        chart.setOption({
+            title: { text: 'Storms by Month (Seasonality)', left: 'center' },
+            xAxis: { type: 'category', data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] },
+            yAxis: { type: 'value', name: 'Number of Storms' },
+            series: [{ type: 'bar', data: [1, 0, 0, 2, 5, 10, 15, 20, 25, 12, 8, 3] }],
+        });
+    }
+
+    function initializeRadarChart() {
+        const chart = echarts.init(document.getElementById('stormRadarChart'));
+        chart.setOption({
+            title: { text: 'Storm Metrics Comparison', left: 'center' },
+            radar: {
+                indicator: [
+                    { name: 'Wind Speed', max: 200 },
+                    { name: 'Pressure', max: 1000 },
+                    { name: 'Duration (hrs)', max: 48 },
+                ],
+            },
+            series: [{
+                type: 'radar',
+                data: [
+                    { value: [180, 900, 24], name: 'Storm A' },
+                    { value: [160, 950, 36], name: 'Storm B' },
+                ],
+            }],
+        });
+    }
+
+    function initializePieChart() {
+        const chart = echarts.init(document.getElementById('stormPieChart'));
+        chart.setOption({
+            title: { text: 'Storm Type Distribution', left: 'center' },
+            series: [{
+                type: 'pie',
+                radius: '50%',
+                data: [
+                    { value: 30, name: 'Tropical Storm' },
+                    { value: 50, name: 'Hurricane' },
+                    { value: 20, name: 'Depression' },
+                ],
+            }],
+        });
+    }
+
+    async function initializeHeatmap() {
+        const chart = echarts.init(document.getElementById('stormHeatmap'));
+        chart.setOption({
+            title: { text: 'Storm Intensity by Location', left: 'center' },
+            series: [{
+                type: 'heatmap',
+                data: [[25.76, -80.19, 120], [29.95, -90.07, 150], [35.22, -80.84, 80]],
+            }],
+        });
+    }
+
+    // Load Overview tab by default
     showTab('overview');
 });

@@ -25,27 +25,13 @@
         <aside class="sidebar">
             <nav>
                 <ul>
-                    <li class="tab" data-tab="overview">
-                        <i class="fas fa-home"></i> Overview
-                    </li>
-                    <li class="tab" data-tab="historical">
-                        <i class="fas fa-history"></i> Historical Storm Events
-                    </li>
-                    <li class="tab" data-tab="damage">
-                        <i class="fas fa-dollar-sign"></i> Hurricane Damage
-                    </li>
-                    <li class="tab" data-tab="casualties">
-                        <i class="fas fa-users"></i> Casualties
-                    </li>
-                    <li class="tab" data-tab="event-type">
-                        <i class="fas fa-cloud-sun"></i> Weather Event Type
-                    </li>
-                    <li class="tab" data-tab="sources">
-                        <i class="fas fa-book"></i> Sources
-                    </li>
-                    <li class="tab" data-tab="contributors">
-                        <i class="fas fa-user-friends"></i> Contributors
-                    </li>
+                    <li class="tab" data-tab="overview"><i class="fas fa-home"></i> Overview</li>
+                    <li class="tab" data-tab="historical"><i class="fas fa-history"></i> Historical Storm Events</li>
+                    <li class="tab" data-tab="damage"><i class="fas fa-dollar-sign"></i> Hurricane Damage</li>
+                    <li class="tab" data-tab="casualties"><i class="fas fa-users"></i> Casualties</li>
+                    <li class="tab" data-tab="event-type"><i class="fas fa-cloud-sun"></i> Weather Event Type</li>
+                    <li class="tab" data-tab="sources"><i class="fas fa-book"></i> Sources</li>
+                    <li class="tab" data-tab="contributors"><i class="fas fa-user-friends"></i> Contributors</li>
                 </ul>
             </nav>
         </aside>
@@ -58,55 +44,44 @@
                 <p>Select a tab from the sidebar to explore more information on weather events, damages, and trends.</p>
                 <img src="hurricane.webp" alt="Hurricane Image" class="hero-image">
 
-                <p>
-                    This page focuses on analyzing the impact of hurricanes in terms of wind speeds, pressure levels, 
-                    fatalities, and economic losses. By leveraging data from various sources, including PostgreSQL, it 
-                    provides insights into historical hurricane patterns, trends, and regional impacts.
-                </p>
+                <p>This page focuses on analyzing the impact of hurricanes in terms of wind speeds, pressure levels, fatalities, and economic losses.</p>
+                <p>It provides insights into historical hurricane patterns, trends, and regional impacts using PostgreSQL data.</p>
+                <p>The project includes interactive visualizations using ECharts, such as radar charts, to compare key metrics like wind speed, pressure, and casualties.</p>
+                <p>Our goal is to empower better understanding of weather patterns, risk management, and preparedness strategies through visual dashboards.</p>
+            </div>
 
-                <p>
-                    The project includes interactive visualizations using ECharts, such as radar charts, to compare key 
-                    metrics like wind speed, pressure, and casualties for different hurricanes.
-                </p>
+            <!-- Historical Storm Events Tab -->
+            <div id="historical" class="tab-content" style="display:none;">
+                <h2>Historical Storm Events</h2>
+                <div id="stormLineChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+                <div id="stormBarChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+                <div id="stormRadarChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+                <div id="stormPieChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+                <div id="stormHeatmap" style="width: 100%; height: 400px;"></div>
+            </div>
 
-                <p>
-                    The goal is to help users explore the severity and impact of hurricanes in an accessible and visual 
-                    format, empowering better understanding of weather patterns, risk management, and preparedness strategies. 
-                </p>
-
-                <p>
-                    The backend integration ensures real-time data fetching and dynamic updates in the visual dashboard.
-                </p>
+            <!-- Hurricane Damage Tab -->
+            <div id="damage" class="tab-content" style="display:none;">
+                <h2>Hurricane Damage</h2>
+                <div id="damageLineChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+                <div id="damageBarChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+                <div id="damageBubbleChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+                <div id="damageChoroplethChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
+                <div id="damagePieChart" style="width: 100%; height: 400px;"></div>
             </div>
 
             <!-- Sources Tab -->
             <div id="sources" class="tab-content" style="display:none;">
                 <h2>Sources</h2>
                 <ul class="sources-list">
-                    <li>
-                        <a href="https://www.wunderground.com" target="_blank">
-                            <img src="logos/wunder logo.png" alt="Wunderground" class="source-logo">
-                            Wunderground
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.wunderground.com/hurricane/archive" target="_blank">
-                            <img src="logos/wunder logo.png" alt="Hurricane Archive" class="source-logo">
-                            Hurricane Archive - Wunderground
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.census.gov" target="_blank">
-                            <img src="logos/census logo.png" alt="US Census" class="source-logo">
-                            Census API
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://lucid.app/lucidchart/a389b08a-e1d8-4b93-820e-bc92dc371738/edit?invitationId=inv_9b44f9da-d612-4767-bb09-d9754b84e540" target="_blank">
-                            <img src="logos/lucid logo.png" alt="Lucidchart" class="source-logo">
-                            Lucidchart
-                        </a>
-                    </li>
+                    <li><a href="https://www.wunderground.com" target="_blank">
+                        <img src="logos/wunder logo.png" alt="Wunderground" class="source-logo"> Wunderground</a></li>
+                    <li><a href="https://www.wunderground.com/hurricane/archive" target="_blank">
+                        <img src="logos/wunder logo.png" alt="Hurricane Archive" class="source-logo"> Hurricane Archive</a></li>
+                    <li><a href="https://www.census.gov" target="_blank">
+                        <img src="logos/census logo.png" alt="US Census" class="source-logo"> Census API</a></li>
+                    <li><a href="https://lucid.app" target="_blank">
+                        <img src="logos/lucid logo.png" alt="Lucidchart" class="source-logo"> Lucidchart</a></li>
                 </ul>
             </div>
 
