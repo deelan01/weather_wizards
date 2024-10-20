@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS public.weather_event_cost_impact (
    weather_event_id INTEGER REFERENCES weather_event(event_id) ON DELETE CASCADE,
    impact_type_id INTEGER REFERENCES impact_type(impact_type_id) ON DELETE CASCADE,
    region_id INTEGER REFERENCES region(region_id) ON DELETE SET NULL,
-   cost_amount NUMERIC(12, 2) CHECK (cost_amount >= 0),  -- Monetary impact with 2 decimal places
+   cost_amount NUMERIC(20, 2) CHECK (cost_amount >= 0),  -- Monetary impact with 2 decimal places
    created_at TIMESTAMP DEFAULT NOW(),
    updated_at TIMESTAMP DEFAULT NOW()
 );
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS public.weather_event_human_impact (
    weather_event_id INTEGER REFERENCES weather_event(event_id) ON DELETE CASCADE,
    impact_type_id INTEGER REFERENCES impact_type(impact_type_id) ON DELETE CASCADE,
    region_id INTEGER REFERENCES region(region_id) ON DELETE SET NULL,
-   recovery_cost NUMERIC(12, 2) CHECK (recovery_cost >= 0),  -- Cost of human recovery efforts
+   recovery_cost NUMERIC(20, 2) CHECK (recovery_cost >= 0),  -- Cost of human recovery efforts
    casualties INTEGER CHECK (casualties >= 0),               -- Number of casualties
    created_at TIMESTAMP DEFAULT NOW(),
    updated_at TIMESTAMP DEFAULT NOW()
