@@ -157,3 +157,73 @@ GROUP BY
    tds.longitude,
    tds.azimuth,
    tds.range;
+
+--loading default record into impact_type
+INSERT INTO public.impact_type VALUES (-1, 'N/A');
+
+--loading data into weather_event_cost_impact
+INSERT INTO weather_event_cost_impact (
+    weather_event_id, 
+    impact_type_id, 
+    region_id, 
+    cost_amount, 
+    created_at, 
+    updated_at
+)
+with nested_hurricanes as (
+	SELECT year, 
+       UNNEST(STRING_TO_ARRAY(
+            REGEXP_REPLACE(retired_names, '^\d+\s*-\s*', ''), ', ')
+        ) AS retired_name,
+         CAST(REGEXP_REPLACE(damage_millions_usd, '[^0-9.]', '', 'g')AS double  precision) * 100000000 AS cost_amount
+     FROM 
+        public.hurricane_archive_summary_staging	
+)
+SELECT 
+    we.event_id, 
+    -1 as impact_type_id, 
+    -1 as region_id, 
+    hass.cost_amount, 
+    NOW() AS created_at, 
+    NOW() AS updated_at
+FROM weather_event we
+JOIN nested_hurricanes hass 
+    ON we.weather_event_name = hass.retired_name
+join weather_event_type wet 
+	on we.weather_event_type_id = wet.weather_event_type_id
+where wet.weather_event_type = 'Hurricane';
+
+--loads weather_event_human_impact
+INSERT INTO weather_event_human_impact (
+    weather_event_id, 
+    impact_type_id, 
+    region_id, 
+    recovery_cost, 
+	casualties,
+    created_at, 
+    updated_at
+)
+with nested_hurricanes as (
+	SELECT 
+	CAST(REGEXP_REPLACE(deaths, '[^0-9.]', '', 'g')AS integer) AS casualties,
+       UNNEST(STRING_TO_ARRAY(
+            REGEXP_REPLACE(retired_names, '^\d+\s*-\s*', ''), ', ')
+        ) AS retired_name,
+         CAST(REGEXP_REPLACE(damage_millions_usd, '[^0-9.]', '', 'g')AS double  precision) * 100000000 AS recovery_cost
+     FROM 
+        public.hurricane_archive_summary_staging	
+)
+SELECT 
+    we.event_id, 
+    -1 as impact_type_id, 
+    -1 as region_id, 
+    hass.recovery_cost, 
+	casualties,
+    NOW() AS created_at, 
+    NOW() AS updated_at
+FROM weather_event we
+JOIN nested_hurricanes hass 
+    ON we.weather_event_name = hass.retired_name
+join weather_event_type wet 
+	on we.weather_event_type_id = wet.weather_event_type_id
+where wet.weather_event_type = 'Hurricane';
