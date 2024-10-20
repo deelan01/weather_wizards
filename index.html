@@ -43,6 +43,7 @@
                 <h2>Welcome to The Weather Event Tracker</h2>
                 <p>Select a tab from the sidebar to explore more information on weather events, damages, and trends.</p>
                 <img src="hurricane.webp" alt="Hurricane Image" class="hero-image">
+<<<<<<< HEAD
 
                 <p>This page focuses on analyzing the impact of hurricanes in terms of wind speeds, pressure levels, fatalities, and economic losses.</p>
                 <p>It provides insights into historical hurricane patterns, trends, and regional impacts using PostgreSQL data.</p>
@@ -68,6 +69,49 @@
                 <div id="damageBubbleChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
                 <div id="damageChoroplethChart" style="width: 100%; height: 400px; margin-bottom: 20px;"></div>
                 <div id="damagePieChart" style="width: 100%; height: 400px;"></div>
+=======
+                <div id="overviewChart" style="height: 400px;"></div>
+                <p>
+                    This page focuses on analyzing the impact of hurricanes in terms of wind speeds, pressure levels, 
+                    fatalities, and economic losses. By leveraging data from various sources, including PostgreSQL, it 
+                    provides insights into historical hurricane patterns, trends, and regional impacts.
+                </p>
+                <p>
+                    The project includes interactive visualizations using ECharts, such as radar charts, to compare key 
+                    metrics like wind speed, pressure, and casualties for different hurricanes.
+                </p>
+                <p>
+                    The goal is to help users explore the severity and impact of hurricanes in an accessible and visual 
+                    format, empowering better understanding of weather patterns, risk management, and preparedness strategies. 
+                </p>
+                <p>
+                    The backend integration ensures real-time data fetching and dynamic updates in the visual dashboard.
+                </p>
+>>>>>>> main
+            </div>
+
+            <!-- Historical Storm Events Tab -->
+            <div id="historical" class="tab-content" style="display:none;">
+                <h2>Historical Storm Events</h2>
+                <div id="historicalChart" style="height: 400px;"></div>
+            </div>
+
+            <!-- Hurricane Damage Tab -->
+            <div id="damage" class="tab-content" style="display:none;">
+                <h2>Hurricane Damage</h2>
+                <div id="damageChart" style="height: 400px;"></div>
+            </div>
+
+            <!-- Casualties Tab -->
+            <div id="casualties" class="tab-content" style="display:none;">
+                <h2>Casualties</h2>
+                <div id="casualtiesChart" style="height: 400px;"></div>
+            </div>
+
+            <!-- Weather Event Type Tab -->
+            <div id="event-type" class="tab-content" style="display:none;">
+                <h2>Weather Event Type</h2>
+                <div id="eventTypeChart" style="height: 400px;"></div>
             </div>
 
             <!-- Sources Tab -->
