@@ -1,7 +1,7 @@
-<h1>Severe Weather Events Data Visualization Dashboard</h1>
+<h1>Weather Wizards: Storm Data ETL and Visualization</h1>
 
 <h2>1. Project Overview</h2>
-<p>This project visualizes data related to severe weather events (tornadoes, hurricanes) and their human, financial, and environmental impacts. The data is processed and stored locally in PostgreSQL. The frontend interacts with the PostgreSQL database through a custom API to provide users with an interactive web-based dashboard to explore weather events and their impacts.</p>
+<p>This project provides an end-to-end solution for loading, transforming, and analyzing weather-related data in a PostgreSQL database, along with a web-based interface for visualizing storm impacts. The focus is on tornado and hurricane data, including staging, transformation, and visualization processes to enable detailed weather analysis. The website allows users to interact with the processed data and view visualizations of storm impacts across the United States.</p>
 
 <h2>2. Tech Stack</h2>
 <h3>Backend:</h3>
