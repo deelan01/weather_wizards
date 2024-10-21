@@ -100,11 +100,13 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
 cd weather_wizards</code></pre>
 
   <li><strong>Set up your configuration file:</strong></li>
+  <pre>
   <ol>
     <li>Copy <code>config.template.json</code> to <code>config.json</code>.</li>
     <li>Edit <code>config.json</code> and add your actual API keys and other credentials.</li>
     <li>Ensure <code>config.json</code> is ignored by Git by confirming it’s listed in <code>.gitignore</code>.</li>
   </ol>
+  </pre>
 
   <li><strong>Create your virtual environment:</strong></li>
   <pre><code>python3 -m venv venv
