@@ -1,58 +1,115 @@
-// API Route: Fetch hurricane data for visualizations
-app.get('/api/hurricane-data', async (req, res) => {
-    try {
-        const result = await pool.query(`
-            SELECT year, event_type, SUM(casualties) AS total_casualties
-            FROM hurricane_archive_summary
-            GROUP BY year, event_type
-            ORDER BY year;
-        `);
-        res.json(result.rows);
-    } catch (error) {
-        console.error('Error fetching hurricane data:', error.message);
-        res.status(500).json({ error: 'Database query failed' });
-    }
-});
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Dashboard initialized!');
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-// Fetch data from the API
-async function fetchHurricaneData() {
-    try {
-        const response = await fetch('/api/hurricane-data');
-        const data = await response.json();
-        createChart(data);
-    } catch (error) {
-        console.error('Error fetching hurricane data:', error);
-    }
-}
-
-// Create a Chart.js bar chart
-function createChart(data) {
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const labels = data.map(item => item.year);
-    const casualties = data.map(item => item.total_casualties);
-
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Total Casualties',
-                data: casualties,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
+    // Function to fetch data from the backend
+    async function fetchData(endpoint) {
+        try {
+            const response = await fetch(endpoint);
+            if (!response.ok) {
+                throw new Error(`Error fetching data from ${endpoint}: ${response.statusText}`);
             }
+            return await response.json();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            return null;
         }
-    });
-}
+    }
 
-// Run the fetch function on page load
-fetchHurricaneData();
+    // Function to initialize the chart
+    function initializeChart(chartElementId, options) {
+        const chart = echarts.init(document.getElementById(chartElementId));
+        chart.setOption(options);
+    }
+
+    // Function to create options for casualties chart (Bar Chart)
+    async function createCasualtiesChart() {
+        const casualtiesData = await fetchData('/api/casualties');
+        if (!casualtiesData) return;
+
+        const events = casualtiesData.map(d => d.event);
+        const casualties = casualtiesData.map(d => d.count);
+
+        return {
+            title: { text: 'Casualties by Event', left: 'center' },
+            xAxis: { type: 'category', data: events },
+            yAxis: { type: 'value', name: 'Casualties' },
+            series: [{ type: 'bar', data: casualties }]
+        };
+    }
+
+    // Function to create options for event type chart (Pie Chart)
+    async function createEventTypeChart() {
+        const eventData = await fetchData('/api/event-types');
+        if (!eventData) return;
+
+        const types = eventData.map(d => d.type);
+        const counts = eventData.map(d => d.count);
+
+        return {
+            title: { text: 'Weather Event Types', left: 'center' },
+            series: [{
+                type: 'pie',
+                radius: '50%',
+                data: counts.map((count, index) => ({ value: count, name: types[index] })),
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };
+    }
+
+    // Function to initialize specific tabs
+    async function initializeTab(tabName) {
+        let chartOptions;
+        switch (tabName) {
+            case 'overview':
+                chartOptions = await createOverviewChart();
+                initializeChart('overviewChart', chartOptions);
+                break;
+            case 'historical':
+                chartOptions = await createHistoricalChart();
+                initializeChart('historicalChart', chartOptions);
+                break;
+            case 'damage':
+                chartOptions = await createDamageChart();
+                initializeChart('damageChart', chartOptions);
+                break;
+            case 'casualties':
+                chartOptions = await createCasualtiesChart();
+                initializeChart('casualtiesChart', chartOptions);
+                break;
+            case 'event-type':
+                chartOptions = await createEventTypeChart();
+                initializeChart('eventTypeChart', chartOptions);
+                break;
+            default:
+                console.error(`No chart found for tab: ${tabName}`);
+        }
+    }
+
+    // Function to show the selected tab
+    function showTab(tabName) {
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabContents.forEach(content => {
+            content.style.display = content.id === tabName ? 'block' : 'none';
+        });
+    }
+
+    // Tab click event handlers
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', async () => {
+            const tabName = tab.getAttribute('data-tab').trim();
+            showTab(tabName); // Show selected tab
+            await initializeTab(tabName); // Initialize the selected tab
+        });
+    });
+
+    // Load the overview tab by default on page load
+    showTab('overview');
+    initializeTab('overview');
+});
