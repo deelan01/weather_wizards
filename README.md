@@ -96,7 +96,17 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
 <p>All of the initial data needed to load the database in in the data/ folder.</p>
 <ol>
   <li><strong>Clone the repository:</strong></li>
+    <pre>git clone https://github.com/deelan01/weather_wizards.git
+         cd weather_wizards
+    </pre>
   <li><strong>Setup your configuration file:</strong></li>
+    <pre>
+        <ol>
+            <li>Copy `config.template.json` to `config.json`.</li>
+            <li>Edit `config.json` and add your actual API keys and other credentials.</li>
+            <li>Ensure `config.json` is not added to version control by checking that it's listed in `.gitignore`.</li>
+        </ol>
+    </pre>
   <li><strong>Create your virtual environment:</strong></li>
   <li><strong>Run the weather_events_scraping notebook:</strong></li>
 </ol>
@@ -173,22 +183,22 @@ DB_PORT=5432
 <h3>Open the frontend dashboard:</h3>
 <pre>http://127.0.0.1:5500/public/index.html</pre>
 
-<h2>9. Version Control & Collaboration</h2>
+<h2>10. Version Control & Collaboration</h2>
 <ul>
   <li><strong>GitHub:</strong> Used for version control, branching, and collaboration. The project is structured into different branches for backend and frontend development.</li>
 </ul>
 
-<h2>10. Future Enhancements</h2>
+<h2>11. Future Enhancements</h2>
 <ul>
   <li><strong>Real-Time Data Integration:</strong> Add APIs for real-time weather data.</li>
   <li><strong>User-Uploaded Data:</strong> Allow users to upload weather data for analysis.</li>
   <li><strong>Machine Learning:</strong> Explore predictive modeling for weather event impacts.</li>
 </ul>
 
-<h2>11. Data Ethics</h2>
+<h2>12. Data Ethics</h2>
 <p>This project establishes and upholds proper data handling to ensure the data is transparent up to date and protects user privacy. Our data sources such as NOAA, FEMA and many more are properly cited and comply to public data policies. Aforementioned in the beginning, this project ensures user privacy is not violated by masking sensitive information from Postgres and MongoDB in a config file. We also made sure to use a vast number of datasets to create a non biased and fair depiction of our story and environmental impacts. Our efforts  reflect a promise to uphold ethical data management, data handling and data accuracy. </p>
 
-<h2>12. Contributors</h2>
+<h2>13. Contributors</h2>
 <ul>
   <li>Manahil Rashid – manahilr701@gmail.com</li>
   <li>Andrew Sanchez – agsanchez2022@gmail.com</li>
@@ -197,10 +207,10 @@ DB_PORT=5432
   <li>Deelan Patel – deelanp93@gmail.com</li>
 </ul>
 
-<h2>13. License</h2>
+<h2>14. License</h2>
 <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
 
-<h2>14. Acknowledgments</h2>
+<h2>15. Acknowledgments</h2>
 <p>Special thanks to:</p>
 <ul>
   <li>NOAA for tornado data</li>
