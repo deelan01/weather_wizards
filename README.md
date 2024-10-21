@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
 </ul>
 <h3>Entity-Relationship Diagram (ERD)</h3>
 <p>Below is the ERD of the PostgreSQL database used in this project:</p>
-<img src="/Users/manahilrashid/Downloads/weather_wizards_schema.png" alt="Weather Wizards ERD" />
+<img src="weather_wizards_schema.png" alt="Weather Wizards ERD" />
 
 <h2>6. ETL Pipeline</h2>
 <ul>
