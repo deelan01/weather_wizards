@@ -95,4 +95,7 @@ This project visualizes data related to severe weather events (tornadoes, hurric
 - **User Uploads**: Allow users to upload weather data for personalized analysis.
 - **Notification System**: Send alerts for new severe weather events using APIs.
 
+#### 11. **Ethical Considerations**
+This project establishes and upholds proper data handling to ensure the data is transparent up to date and protects user privacy. Our data sources such as NOAA, FEMA and many more are properly cited and comply to public data policies. Aforementioned in the beginning, this project ensures user privacy is not violated by masking sensitive information from Postgres and MongoDB in a config file. We also made sure to use a vast number of datasets to create a non biased and fair depiction of our story and environmental impacts. Our efforts  reflect a promise to uphold ethical data management, data handling and data accuracy. 
+
 This updated outline integrates **Heroku** for deployment, ensuring the project is accessible online with cloud-based data storage via MongoDB Atlas and PostgreSQL for local and production data management.
