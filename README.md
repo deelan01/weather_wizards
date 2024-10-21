@@ -124,3 +124,5 @@ def get_weather_events():
   <li><strong>Machine Learning:</strong> Explore predictive modeling for weather event impacts.</li>
 </ul>
 
+<h2>11. Data Ethics</h2>
+<p>This project establishes and upholds proper data handling to ensure the data is transparent up to date and protects user privacy. Our data sources such as NOAA, FEMA and many more are properly cited and comply to public data policies. Aforementioned in the beginning, this project ensures user privacy is not violated by masking sensitive information from Postgres and MongoDB in a config file. We also made sure to use a vast number of datasets to create a non biased and fair depiction of our story and environmental impacts. Our efforts  reflect a promise to uphold ethical data management, data handling and data accuracy. </p>
