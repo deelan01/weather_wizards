@@ -7,7 +7,7 @@
 <h3>Backend:</h3>
 <ul>
   <li><strong>PostgreSQL</strong>: Local data storage and schema-based organization of weather events, human, and financial impacts.</li>
-  <li><strong>Flask</strong>: Python web framework for serving APIs that interact with the database.</li>
+  <li><strong>Express.js</strong>: Node.js backend server for serving APIs and handling requests.</li>
   <li><strong>SQLAlchemy</strong>: ORM to interact with PostgreSQL databases in Python.</li>
   <li><strong>JavaScript</strong>: Interacts with the Flask backend to request and display data dynamically in the frontend.</li>
 </ul>
@@ -15,8 +15,7 @@
 <h3>Frontend:</h3>
 <ul>
   <li><strong>HTML/CSS/JavaScript</strong>: For building the UI of the dashboard.</li>
-  <li><strong>D3.js and Plotly.js</strong>: For generating interactive data visualizations like charts and graphs.</li>
-  <li><strong>Leaflet.js</strong>: For mapping weather events with geographical data.</li>
+  <li><strong>Chart.js</strong>: For generating interactive charts and graphs.</li>
 </ul>
 
 <h3>Data Processing:</h3>
@@ -37,8 +36,13 @@
 ├── utils/                   # Utility scripts for ETL processes, data fetching, and data cleaning.
 ├── config_template.json      # Configuration template for API keys and DB connections.
 ├── .gitignore                # Files and directories to be ignored by Git.
-├── hurricane.webp            # Visual asset for hurricane-related data.
-├── index.html                # Main webpage for the interactive dashboard.
+├── public/                   # Public assets for the frontend
+│   ├── index.html            # Main HTML file for the web dashboard
+│   ├── style.css             # CSS file for styling the dashboard
+│   └── script.js             # JavaScript logic for interactive charts
+├── server.js                 # Node.js backend server
+├── .env                      # Environment variables configuration (DB connection)
+└── package.json              # Node.js dependencies and project metadata
 </pre>
 
 <h2>4. Database Design</h2>
@@ -78,6 +82,9 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
   <li><strong>Blizzard Data</strong>: National Weather Service (NWS).</li>
   <li><strong>Impact Data</strong>: FEMA, insurance agencies, public datasets.</li>
 </ul>
+<h3>Entity-Relationship Diagram (ERD)</h3>
+<p>Below is the ERD of the PostgreSQL database used in this project:</p>
+<img src="/Users/manahilrashid/Downloads/weather_wizards_schema.png" alt="Weather Wizards ERD" />
 
 <h2>6. ETL Pipeline</h2>
 <ul>
@@ -90,26 +97,65 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
 <h3>Interactive Dashboard Layout:</h3>
 <ul>
   <li><strong>Filters:</strong> Users can filter data by event type (e.g., hurricane), date range, and location.</li>
-  <li><strong>Visualizations:</strong></li>
-  <ul>
-    <li><strong>Bar Charts:</strong> Display the number of events and impacts by year.</li>
-    <li><strong>Line Graphs:</strong> Show trends in event frequency over time.</li>
-    <li><strong>Geographic Maps (Leaflet.js):</strong> Visualize events on a map with markers for event severity and impact.</li>
-  </ul>
+  <li><strong>Visualizations:</strong>
+    <ul>
+      <li><strong>Bar Charts:</strong> Number of events and impacts by year.</li>
+      <li><strong>Line Graphs:</strong> Trends in event frequency over time.</li>
+      <li><strong>Pie and Doughnut Charts:</strong> Distribution of event types and damages.</li>
+    </ul>
+  </li>
 </ul>
 
-<h3>Example: Geographic Visualizations</h3>
-<p><strong>Leaflet.js:</strong> Used for mapping weather events with custom layers (e.g., tornado paths, hurricane tracks).</p>
+<h3>Example Visualization Using Chart.js:</h3>
+<pre>
+new Chart(document.getElementById('yearsChart'), {
+    type: 'bar',
+    data: {
+        labels: ['2015', '2016', '2017'],
+        datasets: [{
+            label: 'Hurricanes per Year',
+            data: [10, 15, 20],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: { responsive: true }
+});
+</pre>
 
 <h2>8. Backend API Design</h2>
-<p>The backend provides RESTful API endpoints via Flask, allowing the frontend to retrieve and filter weather event data. Sample Flask route for weather event data:</p>
+<p>The backend provides RESTful API endpoints to retrieve weather event data in JSON format. Example API route:</p>
 <pre>
-@app.route('/api/weather-events')
-def get_weather_events():
-    # Query PostgreSQL and return data as JSON
-    events = WeatherEvent.query.all()
-    return jsonify([event.to_dict() for event in events])
+app.get('/api/years-incidents', async (req, res) => {
+    const result = await pool.query(`
+        SELECT EXTRACT(YEAR FROM start_date) AS year, 
+               COUNT(event_id) AS incidents 
+        FROM weather_event 
+        GROUP BY year ORDER BY year DESC;
+    `);
+    res.json(result.rows);
+});
 </pre>
+
+<h2>9. Running the Project</h2>
+<h3>Install dependencies:</h3>
+<pre>npm install</pre>
+
+<h3>Set environment variables in .env:</h3>
+<pre>
+DB_USER=your_username
+DB_PASSWORD=your_password
+DB_HOST=localhost
+DB_NAME=weather_db
+DB_PORT=5432
+</pre>
+
+<h3>Start the backend server:</h3>
+<pre>node server.js</pre>
+
+<h3>Open the frontend dashboard:</h3>
+<pre>http://127.0.0.1:5500/public/index.html</pre>
 
 <h2>9. Version Control & Collaboration</h2>
 <ul>
@@ -126,3 +172,23 @@ def get_weather_events():
 
 <h2>11. Data Ethics</h2>
 <p>This project establishes and upholds proper data handling to ensure the data is transparent up to date and protects user privacy. Our data sources such as NOAA, FEMA and many more are properly cited and comply to public data policies. Aforementioned in the beginning, this project ensures user privacy is not violated by masking sensitive information from Postgres and MongoDB in a config file. We also made sure to use a vast number of datasets to create a non biased and fair depiction of our story and environmental impacts. Our efforts  reflect a promise to uphold ethical data management, data handling and data accuracy. </p>
+
+<h2>12. Contributors</h2>
+<ul>
+  <li>Manahil Rashid – manahilr701@gmail.com</li>
+  <li>Andrew Sanchez – agsanchez2022@gmail.com</li>
+  <li>David Bui – davidnbui@yahoo.com</li>
+  <li>Jeff Hammans – hef1125@hotmail.com</li>
+  <li>Deelan Patel – deelanp93@gmail.com</li>
+</ul>
+
+<h2>13. License</h2>
+<p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+
+<h2>14. Acknowledgments</h2>
+<p>Special thanks to:</p>
+<ul>
+  <li>NOAA for tornado data</li>
+  <li>National Hurricane Center for hurricane data</li>
+  <li>FEMA for impact data resources</li>
+</ul>
