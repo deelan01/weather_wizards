@@ -1,112 +1,114 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.tab');  // All tab elements
-    const tabContents = document.querySelectorAll('.tab-content');  // All tab contents
-    const yearSlider = document.getElementById('yearSlider');  // Year slider element
-    const yearLabel = document.getElementById('yearLabel');  // Label to display the year
-    const hurricaneGraph = document.getElementById('hurricaneGraph');  // Graph container
-    let historicalData = [];  // Store historical storm data
+    const tabs = document.querySelectorAll('.tab'); // All tab elements
+    const tabContents = document.querySelectorAll('.tab-content'); // All tab contents
 
-    // Add event listeners to tabs for switching content
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const tabName = tab.getAttribute('data-tab').trim();
-            console.log(`Tab clicked: ${tabName}`);
-            switchTab(tabName);  // Switch to the selected tab
-        });
-    });
+    // Helper function to fetch data from an endpoint
+    async function fetchData(endpoint) {
+        try {
+            const response = await fetch(endpoint);
+            if (!response.ok) throw new Error(`Failed to fetch data: ${response.statusText}`);
+            return await response.json();
+        } catch (error) {
+            console.error(`Error fetching data from ${endpoint}:`, error);
+            return null;
+        }
+    }
 
     // Function to switch tabs and display the correct content
     function switchTab(tabName) {
         tabContents.forEach(content => {
-            content.style.display = content.id === tabName ? 'block' : 'none';  // Show only the active tab
+            content.style.display = content.id === tabName ? 'block' : 'none';
         });
-
-        // If the 'historical' tab is selected, update the graph
-        if (tabName === 'historical') {
-            updateGraph(yearSlider.value);  // Plot the graph for the selected year
-        }
     }
 
-    // Fetch and set the min and max years for the slider
-    async function fetchYearRange() {
-        try {
-            const response = await fetch('/api/years-range');  // Call the API for year range
-            if (!response.ok) throw new Error('Failed to fetch year range');
-            const { min_year, max_year } = await response.json();
+    // Event listeners for tabs
+    tabs.forEach(tab => {
+        tab.addEventListener('click', async () => {
+            const tabName = tab.getAttribute('data-tab').trim();
+            console.log(`Tab clicked: ${tabName}`);
+            switchTab(tabName);
 
-            // Set slider attributes dynamically based on the API response
-            yearSlider.min = min_year;
-            yearSlider.max = max_year;
-            yearSlider.value = min_year;
-            yearLabel.textContent = `Year: ${min_year}`;
-
-            // Fetch the historical data and plot the initial graph
-            await fetchDataAndPlot(min_year);
-        } catch (error) {
-            console.error('Error fetching year range:', error);
-        }
-    }
-
-    // Fetch historical storm data and store it
-    async function fetchDataAndPlot(initialYear) {
-        try {
-            const response = await fetch('/api/historical');  // Call the API for historical data
-            if (!response.ok) throw new Error('Failed to fetch historical data');
-            historicalData = await response.json();  // Store the data
-            console.log('Historical Data:', historicalData);
-            updateGraph(initialYear);  // Plot the graph for the initial year
-        } catch (error) {
-            console.error('Error fetching historical data:', error);
-        }
-    }
-
-    // Update the graph based on the selected year
-    function updateGraph(year) {
-        const dataForYear = historicalData.find(d => d.year == year);  // Find data for the selected year
-
-        if (!dataForYear) {
-            console.warn(`No data available for year: ${year}`);
-            return;
-        }
-
-        // Initialize ECharts and configure the graph
-        const chart = echarts.init(hurricaneGraph);
-        const option = {
-            title: {
-                text: `Storms and Hurricanes in ${year}`,
-                left: 'center'
-            },
-            tooltip: {
-                trigger: 'axis'
-            },
-            xAxis: {
-                type: 'category',
-                data: ['Storms', 'Hurricanes']
-            },
-            yAxis: {
-                type: 'value'
-            },
-            series: [{
-                name: 'Count',
-                type: 'bar',
-                data: [dataForYear.storms, dataForYear.hurricanes],
-                barWidth: '50%',
-                itemStyle: {
-                    color: '#0077B6'
-                }
-            }]
-        };
-        chart.setOption(option);  // Render the chart with the given options
-    }
-
-    // Event listener for the year slider to update the graph dynamically
-    yearSlider.addEventListener('input', () => {
-        const selectedYear = yearSlider.value;
-        yearLabel.textContent = `Year: ${selectedYear}`;
-        updateGraph(selectedYear);  // Update the graph with the selected year
+            // Render the chart when its tab is clicked
+            if (tabName === 'historical') await renderYearsChart();
+            else if (tabName === 'damage') await renderDamageChart();
+            else if (tabName === 'casualties') await renderCasualtiesChart();
+            else if (tabName === 'event-type') await renderEventTypesChart();
+        });
     });
 
-    // Initialize the application by fetching the year range
-    fetchYearRange();
-    switchTab('overview');  // Show the overview tab by default
+    // Chart rendering functions
+    async function renderYearsChart() {
+        const data = await fetchData('http://localhost:3000/api/years-incidents');
+        const labels = data.map(item => item.year);
+        const values = data.map(item => item.number_of_hurricanes);
+
+        new Chart(document.getElementById('yearsChart'), {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Hurricanes per Year',
+                    data: values,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true }
+        });
+    }
+
+    async function renderDamageChart() {
+        const data = await fetchData('http://localhost:3000/api/hurricane_damage');
+        const labels = data.map(item => item.weather_event_name);
+        const values = data.map(item => parseFloat(item.damage_cost.replace(/[^0-9.-]+/g, "")));
+
+        new Chart(document.getElementById('damageChart'), {
+            type: 'doughnut',
+            data: {
+                labels: labels,
+                datasets: [{ data: values }]
+            },
+            options: { responsive: true }
+        });
+    }
+
+    async function renderCasualtiesChart() {
+        const data = await fetchData('http://localhost:3000/api/casualties');
+        const labels = data.map(item => item.year);
+        const values = data.map(item => item.number_of_casualties);
+
+        new Chart(document.getElementById('casualtiesChart'), {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Hurricane Casualties',
+                    data: values,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true }
+        });
+    }
+
+    async function renderEventTypesChart() {
+        const data = await fetchData('http://localhost:3000/api/event-types');
+        const labels = data.map(item => item.weather_event_type);
+        const values = data.map(item => item.weather_event_type_count);
+
+        new Chart(document.getElementById('eventTypeChart'), {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{ data: values }]
+            },
+            options: { responsive: true }
+        });
+    }
+
+    // Render the default tab on page load
+    renderYearsChart(); // Load the 'historical' chart by default
 });
