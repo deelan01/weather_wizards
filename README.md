@@ -96,7 +96,6 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
 <h2>7. Frontend Design</h2>
 <h3>Interactive Dashboard Layout:</h3>
 <ul>
-  <li><strong>Filters:</strong> Users can filter data by event type (e.g., hurricane), date range, and location.</li>
   <li><strong>Visualizations:</strong>
     <ul>
       <li><strong>Bar Charts:</strong> Number of events and impacts by year.</li>
