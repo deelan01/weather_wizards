@@ -92,31 +92,34 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
   <li><strong>Load:</strong> Store cleaned data in PostgreSQL for structured querying and analysis.</li>
 </ul>
 
-<h3>Data Extraction:</h3>
-<p>All of the initial data needed to load the database in in the data/ folder.</p>
+<h3>Data Extraction</h3>
+<p>All initial data needed to load the database is located in the <code>data/</code> folder.</p>
 <ol>
   <li><strong>Clone the repository:</strong></li>
-    <pre>git clone https://github.com/deelan01/weather_wizards.git
-         cd weather_wizards
-    </pre>
-  <li><strong>Setup your configuration file:</strong></li>
-    <pre>
-        <ol>
-            <li>Copy `config.template.json` to `config.json`.</li>
-            <li>Edit `config.json` and add your actual API keys and other credentials.</li>
-            <li>Ensure `config.json` is not added to version control by checking that it's listed in `.gitignore`.</li>
-        </ol>
-    </pre>
+  <pre><code>git clone https://github.com/deelan01/weather_wizards.git
+cd weather_wizards</code></pre>
+
+  <li><strong>Set up your configuration file:</strong></li>
+  <ol>
+    <li>Copy <code>config.template.json</code> to <code>config.json</code>.</li>
+    <li>Edit <code>config.json</code> and add your actual API keys and other credentials.</li>
+    <li>Ensure <code>config.json</code> is ignored by Git by confirming it’s listed in <code>.gitignore</code>.</li>
+  </ol>
+
   <li><strong>Create your virtual environment:</strong></li>
-  <li><strong>Run the weather_events_scraping notebook:</strong></li>
+  <pre><code>python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate</code></pre>
+
+  <li><strong>Run the weather events scraping notebook:</strong></li>
+  <pre><code>jupyter notebook weather_events_scraping.ipynb</code></pre>
 </ol>
 
-<h3>Pipeline Execution:</h3>
+<h3>Pipeline Execution</h3>
+<p>If not already done, complete steps 1 through 3 from the <strong>Data Extraction</strong> section above.</p>
 <ol>
-  <li><strong>Clone the repository:</strong></li>
-  <li><strong>Setup your configuration file:</strong></li>
-  <li><strong>Create your Postgres database:</strong></li>
-  <li><strong>Run the postgres_load_databases notebook:</strong></li>
+  <li><strong>Create your PostgreSQL database:</strong></li>
+  <li><strong>Run the PostgreSQL database loading notebook:</strong></li>
+  <pre><code>jupyter notebook postgres_load_databases.ipynb</code></pre>
 </ol>
 
 <h2>7. Frontend Design</h2>
