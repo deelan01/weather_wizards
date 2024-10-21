@@ -96,24 +96,24 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
 <p>All initial data needed to load the database is located in the <code>data/</code> folder.</p>
 <ol>
   <li><strong>Clone the repository:</strong></li>
-  <pre><code>git clone https://github.com/deelan01/weather_wizards.git
-cd weather_wizards</code></pre>
+  <pre>git clone https://github.com/deelan01/weather_wizards.git
+cd weather_wizards</pre>
 
   <li><strong>Set up your configuration file:</strong></li>
-  <pre>
   <ol>
     <li>Copy <code>config.template.json</code> to <code>config.json</code>.</li>
     <li>Edit <code>config.json</code> and add your actual API keys and other credentials.</li>
-    <li>Ensure <code>config.json</code> is ignored by Git by confirming it’s listed in <code>.gitignore</code>.</li>
+    <li>Ensure <code>config.json</code> is ignored by Git by confirming it is listed in <code>.gitignore</code>.</li>
   </ol>
-  </pre>
 
   <li><strong>Create your virtual environment:</strong></li>
-  <pre><code>python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate</code></pre>
+  <pre>python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate</pre>
+
   <li><strong>Run the weather events scraping notebook:</strong></li>
-  <pre><code>jupyter notebook weather_events_scraping.ipynb</code></pre>
+  <pre>jupyter notebook weather_events_scraping.ipynb</pre>
 </ol>
+
 
 <h3>Pipeline Execution</h3>
 <p>If not already done, complete steps 1 through 3 from the <strong>Data Extraction</strong> section above.</p>
