@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
 </ul>
 
 <h3>Data Extraction</h3>
-<p>All initial data needed to load the database is located in the <code>data/</code> folder.</p>
+<p>All initial data needed to load the database is located in the <code>data/</code> folder so this only needs to be run if new data is required.</p>
 <ol>
   <li><strong>Clone the repository:</strong></li>
   <pre>git clone https://github.com/deelan01/weather_wizards.git
