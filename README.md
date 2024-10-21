@@ -111,7 +111,6 @@ cd weather_wizards</code></pre>
   <li><strong>Create your virtual environment:</strong></li>
   <pre><code>python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate</code></pre>
-
   <li><strong>Run the weather events scraping notebook:</strong></li>
   <pre><code>jupyter notebook weather_events_scraping.ipynb</code></pre>
 </ol>
@@ -120,6 +119,9 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate</code></pre>
 <p>If not already done, complete steps 1 through 3 from the <strong>Data Extraction</strong> section above.</p>
 <ol>
   <li><strong>Create your PostgreSQL database:</strong></li>
+  <p>To create a PostgreSQL database named <code>weather_wizards</code>, run the following commands in your terminal:</p>
+  <pre><code>psql -U postgres
+CREATE DATABASE weather_wizards;</code></pre>
   <li><strong>Run the PostgreSQL database loading notebook:</strong></li>
   <pre><code>jupyter notebook postgres_load_databases.ipynb</code></pre>
 </ol>
