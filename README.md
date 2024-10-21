@@ -15,8 +15,7 @@
 <h3>Frontend:</h3>
 <ul>
   <li><strong>HTML/CSS/JavaScript</strong>: For building the UI of the dashboard.</li>
-  <li><strong>D3.js and Plotly.js</strong>: For generating interactive data visualizations like charts and graphs.</li>
-  <li><strong>Leaflet.js</strong>: For mapping weather events with geographical data.</li>
+  <li><strong>D3.js and chart.js</strong>: For generating interactive data visualizations like charts and graphs.</li>
 </ul>
 
 <h3>Data Processing:</h3>
@@ -74,9 +73,8 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
 <h2>5. Data Sources</h2>
 <ul>
   <li><strong>Tornado Data</strong>: National Oceanic and Atmospheric Administration (NOAA).</li>
-  <li><strong>Hurricane Data</strong>: National Hurricane Center (NHC).</li>
-  <li><strong>Blizzard Data</strong>: National Weather Service (NWS).</li>
-  <li><strong>Impact Data</strong>: FEMA, insurance agencies, public datasets.</li>
+  <li><strong>Hurricane Data</strong>: Weather Underground (https://www.wunderground.com/).</li>
+  <li><strong>Zip Code Data</strong>: Simplemaps (https://simplemaps.com/data/us-zips)</li>
 </ul>
 
 <h2>6. ETL Pipeline</h2>
@@ -86,20 +84,32 @@ CREATE TABLE IF NOT EXISTS public.weather_event (
   <li><strong>Load:</strong> Store cleaned data in PostgreSQL for structured querying and analysis.</li>
 </ul>
 
+<h3>Data Extraction:</h3>
+<p>All of the initial data needed to load the database in in the data/ folder.</p>
+<ol>
+  <li><strong>Clone the repository:</strong></li>
+  <li><strong>Setup your configuration file:</strong></li>
+  <li><strong>Create your virtual environment:</strong></li>
+  <li><strong>Run the weather_events_scraping notebook:</strong></li>
+</ol>
+
+<h3>Pipeline Execution:</h3>
+<ol>
+  <li><strong>Clone the repository:</strong></li>
+  <li><strong>Setup your configuration file:</strong></li>
+  <li><strong>Create your Postgres database:</strong></li>
+  <li><strong>Run the postgres_load_databases notebook:</strong></li>
+</ol>
+
 <h2>7. Frontend Design</h2>
 <h3>Interactive Dashboard Layout:</h3>
 <ul>
-  <li><strong>Filters:</strong> Users can filter data by event type (e.g., hurricane), date range, and location.</li>
   <li><strong>Visualizations:</strong></li>
   <ul>
     <li><strong>Bar Charts:</strong> Display the number of events and impacts by year.</li>
     <li><strong>Line Graphs:</strong> Show trends in event frequency over time.</li>
-    <li><strong>Geographic Maps (Leaflet.js):</strong> Visualize events on a map with markers for event severity and impact.</li>
   </ul>
 </ul>
-
-<h3>Example: Geographic Visualizations</h3>
-<p><strong>Leaflet.js:</strong> Used for mapping weather events with custom layers (e.g., tornado paths, hurricane tracks).</p>
 
 <h2>8. Backend API Design</h2>
 <p>The backend provides RESTful API endpoints via Flask, allowing the frontend to retrieve and filter weather event data. Sample Flask route for weather event data:</p>
@@ -114,7 +124,6 @@ def get_weather_events():
 <h2>9. Version Control & Collaboration</h2>
 <ul>
   <li><strong>GitHub:</strong> Used for version control, branching, and collaboration. The project is structured into different branches for backend and frontend development.</li>
-  <li><strong>GitHub Actions:</strong> Integrated for continuous integration and testing.</li>
 </ul>
 
 <h2>10. Future Enhancements</h2>
